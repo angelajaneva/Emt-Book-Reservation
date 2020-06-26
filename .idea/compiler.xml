@@ -9,6 +9,7 @@
         <module name="user-subscription" />
         <module name="fine-management" />
         <module name="bookreservation" />
+        <module name="Emt-Book-Reservation" />
       </profile>
     </annotationProcessing>
   </component>
