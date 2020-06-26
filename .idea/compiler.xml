@@ -6,11 +6,12 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="shared-kernel" />
+        <module name="bookreservation" />
+        <module name="Emt-Book-Reservation" />
+        <module name="reservation" />
         <module name="user-subscription" />
         <module name="fine-management" />
-        <module name="bookreservation" />
-        <module name="reservation" />
+        <module name="shared-kernel" />
       </profile>
     </annotationProcessing>
   </component>
