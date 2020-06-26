@@ -12,6 +12,7 @@
         <option value="$PROJECT_DIR$/user-subscription/pom.xml" />
         <option value="$PROJECT_DIR$/reservation/pom.xml" />
         <option value="$PROJECT_DIR$/shared-kernel/pom.xml" />
+        <option value="$PROJECT_DIR$/book-catalog/pom.xml" />
       </list>
     </option>
   </component>
