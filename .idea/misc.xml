@@ -7,6 +7,8 @@
         <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/fine-management/pom.xml" />
         <option value="$PROJECT_DIR$/user-subscription/pom.xml" />
+        <option value="$PROJECT_DIR$/reservation/pom.xml" />
+        <option value="$PROJECT_DIR$/shared-kernel/pom.xml" />
       </list>
     </option>
   </component>
