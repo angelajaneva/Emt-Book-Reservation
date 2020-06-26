@@ -1,6 +1,5 @@
-package mk.ukim.finki.emt.bookcatalog.domain.model;
+package mk.ukim.finki.emt.finemanagement.domain.model;
 
-import lombok.NoArgsConstructor;
 import mk.ukim.finki.emt.sharedkernel.domain.base.ValueObject;
 import org.springframework.lang.NonNull;
 
@@ -8,20 +7,19 @@ import javax.persistence.Embeddable;
 import java.util.Objects;
 
 @Embeddable
-@NoArgsConstructor
-public class Description implements ValueObject {
+public class FineDescription implements ValueObject {
 
     private String description;
 
-    public Description(@NonNull String description) {
-        this.description = Objects.requireNonNull(description, "description must not be null");
+    public FineDescription(@NonNull String description) {
+        this.description = description;
     }
 
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
-        if (!(o instanceof Description)) return false;
-        Description that = (Description) o;
+        if (!(o instanceof FineDescription)) return false;
+        FineDescription that = (FineDescription) o;
         return Objects.equals(description, that.description);
     }
 
@@ -35,4 +33,3 @@ public class Description implements ValueObject {
         return description;
     }
 }
-
