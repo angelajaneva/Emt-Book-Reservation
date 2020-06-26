@@ -14,5 +14,19 @@
         <module>reservation</module>
         <module>fine-management</module>
     </modules>
+    <dependencies>
+        <dependency>
+            <groupId>org.springframework.data</groupId>
+            <artifactId>spring-data-commons</artifactId>
+            <version>3.2.5.RELEASE</version>
+            <scope>compile</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <version>1.18.12</version>
+            <scope>compile</scope>
+        </dependency>
+    </dependencies>
 
 </project>

@@ -6,16 +6,20 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="user-subscription" />
-        <module name="fine-management" />
         <module name="bookreservation" />
         <module name="Emt-Book-Reservation" />
+        <module name="reservation" />
+        <module name="user-subscription" />
+        <module name="fine-management" />
+        <module name="shared-kernel" />
       </profile>
     </annotationProcessing>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
       <module name="fine-management" options="-parameters" />
+      <module name="reservation" options="-parameters" />
+      <module name="shared-kernel" options="-parameters" />
       <module name="user-subscription" options="-parameters" />
     </option>
   </component>

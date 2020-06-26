@@ -20,11 +20,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2ddaf40d-7165-45db-b682-fc648a5efdec" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bookreservation.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
     </list>
@@ -33,12 +31,22 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+        <option value="Interface" />
+      </list>
+    </option>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="ProjectId" id="1drGchJQpxgdi72sGwvAOjYRtGs" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
+    <option name="autoscrollToSource" value="true" />
+    <option name="flattenPackages" value="true" />
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
@@ -46,15 +54,44 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_directory_selection" value="$PROJECT_DIR$/shared-kernel/src/main/java" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="settings.editor.selected.configurable" value="editor.preferences.import" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="mk.ukim.finki.emt.sharedkernel" />
+    </key>
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="src.main.java.mk.ukim.finki.emt.sharedkernel.domain.base" />
+    </key>
   </component>
   <component name="RunManager" selected="Spring Boot.FineManagementApplication">
     <configuration name="FineManagementApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
       <module name="fine-management" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="mk.ukim.finki.emt.finemanagement.FineManagementApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ReservationApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="reservation" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="mk.ukim.finki.emt.reservation.ReservationApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="SharedKernelApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="shared-kernel" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="mk.ukim.finki.emt.sharedkernel.SharedKernelApplication" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -78,7 +115,7 @@
       <option name="presentableId" value="Default" />
       <updated>1593173633186</updated>
       <workItem from="1593173638252" duration="924000" />
-      <workItem from="1593175882918" duration="1020000" />
+      <workItem from="1593175882918" duration="3588000" />
     </task>
     <servers />
   </component>
@@ -104,5 +141,35 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="1141" y="246" key="#com.intellij.ide.util.MemberChooser" timestamp="1593179456680">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="1141" y="246" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1593179456680" />
+    <state x="419" y="444" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog" timestamp="1593180233033">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="419" y="444" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1593180233033" />
+    <state x="735" y="401" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.packages" timestamp="1593180098020">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="735" y="401" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.packages/0.0.1920.1040@0.0.1920.1040" timestamp="1593180098020" />
+    <state x="866" y="185" key="Maven.ArtifactSearchDialog" timestamp="1593179260722">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="866" y="185" key="Maven.ArtifactSearchDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1593179260722" />
+    <state x="1152" y="308" key="chooseDestDirectoryDialog" timestamp="1593179765956">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="1152" y="308" key="chooseDestDirectoryDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1593179765956" />
+    <state x="-6" y="7" width="839" height="709" key="dock-window-1" timestamp="1593179878958">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="-6" y="7" width="839" height="709" key="dock-window-1/0.0.1920.1040@0.0.1920.1040" timestamp="1593179878958" />
+    <state x="143" y="164" width="672" height="678" key="search.everywhere.popup" timestamp="1593179084598">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="143" y="164" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1593179084598" />
   </component>
 </project>
