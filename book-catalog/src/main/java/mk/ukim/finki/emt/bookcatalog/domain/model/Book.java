@@ -16,12 +16,12 @@ import javax.persistence.*;
 public class Book extends AbstractEntity<BookId> {
 
     @EmbeddedId
+    @Column(name = "book_id")
     private BookId id;
 
     @Embedded
     @Column(name = "book_name", nullable = false)
     private BookName bookName;
-
 
     @Column(name = "quantity", nullable = false)
     private int quantity;
