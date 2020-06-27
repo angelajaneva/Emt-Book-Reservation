@@ -1,4 +1,4 @@
-package mk.ukim.finki.emt.usersubscription.domain.model;
+package mk.ukim.finki.emt.usersubscription.domain.model.User;
 
 
 import lombok.Getter;

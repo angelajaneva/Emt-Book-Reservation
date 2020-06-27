@@ -1,4 +1,5 @@
-package mk.ukim.finki.emt.usersubscription.domain.model;
+package mk.ukim.finki.emt.usersubscription.domain.model.Subscription;
+
 
 import lombok.Getter;
 import mk.ukim.finki.emt.sharedkernel.domain.base.ValueObject;
@@ -11,36 +12,36 @@ import java.util.Objects;
 @MappedSuperclass
 @Embeddable
 @Getter
-public class BirthDate implements ValueObject {
+public class SubscriptionDate implements ValueObject {
 
     private final Date date;
 
-    public BirthDate(Date date) {
+    public SubscriptionDate(Date date) {
         this.date = date;
     }
 
-    public BirthDate(){
-        date = null;
+    public SubscriptionDate(){
+        date = new Date();
     }
 
-    public static BirthDate valueOf(Date date){
-        if (date == null || date.after(new Date())){
-            throw new IllegalArgumentException("Birth date is required");
+    public static SubscriptionDate valueOf(Date date){
+        if (date == null){
+            throw new IllegalArgumentException("Subscription date is required");
         }
 
-        return new BirthDate(date);
+        return new SubscriptionDate(date);
     }
 
     @Override
     public String toString() {
-        return "Birth date"+ date;
+        return "Subscription date"+ date;
     }
 
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
-        BirthDate birthDate = (BirthDate) o;
+        var birthDate = (SubscriptionDate) o;
         return Objects.equals(date, birthDate.date);
     }
 
