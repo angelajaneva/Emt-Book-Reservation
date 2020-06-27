@@ -5,6 +5,7 @@ import lombok.NoArgsConstructor;
 import mk.ukim.finki.emt.sharedkernel.domain.base.ValueObject;
 import org.springframework.lang.NonNull;
 
+import javax.persistence.Column;
 import javax.persistence.Embeddable;
 import javax.persistence.MappedSuperclass;
 import java.util.Objects;
@@ -15,7 +16,10 @@ import java.util.Objects;
 @NoArgsConstructor
 public class Name implements ValueObject {
 
+    @Column(name = "first_name")
     private String firstName;
+
+    @Column(name = "last_name")
     private String lastName;
 
     public Name(@NonNull String firstName, @NonNull String lastName) {
