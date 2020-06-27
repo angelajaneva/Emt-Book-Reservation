@@ -1,10 +1,11 @@
 package mk.ukim.finki.emt.sharedkernel.domain.base;
 
+import lombok.NoArgsConstructor;
 import lombok.NonNull;
 
 import java.util.Objects;
 import java.util.UUID;
-
+@NoArgsConstructor
 public class DomainObjectId implements ValueObject {
 
     private String id;

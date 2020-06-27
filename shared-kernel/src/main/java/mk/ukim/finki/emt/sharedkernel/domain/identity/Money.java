@@ -8,7 +8,7 @@ import javax.persistence.Embeddable;
 import javax.persistence.MappedSuperclass;
 import java.util.Objects;
 
-@MappedSuperclass
+//@MappedSuperclass
 @Embeddable
 @Getter
 public class Money implements ValueObject {

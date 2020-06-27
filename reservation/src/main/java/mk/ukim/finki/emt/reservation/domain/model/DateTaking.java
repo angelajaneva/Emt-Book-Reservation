@@ -12,7 +12,6 @@ public class DateTaking implements ValueObject {
 
     private LocalDate dateTaking;
 
-
     public DateTaking(@NonNull LocalDate dateTaking) {
         this.dateTaking = dateTaking;
     }

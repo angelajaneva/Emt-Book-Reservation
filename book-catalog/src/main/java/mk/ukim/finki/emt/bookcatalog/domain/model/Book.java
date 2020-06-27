@@ -46,8 +46,12 @@ public class Book extends AbstractEntity<BookId> {
     @Column(name = "genre", nullable = false)
     private Genre genre;
 
+
     @Embedded
-    @Column(name = "price", nullable = false)
+    @AttributeOverrides({
+            @AttributeOverride(name = "amount", column =
+            @Column(name = "price"))
+    })
     private Money price;
 
     @Embedded
