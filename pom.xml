@@ -12,6 +12,7 @@
         <module>shared-kernel</module>
         <module>user-subscription</module>
         <module>reservation</module>
+        <module>book-catalog</module>
         <module>fine-management</module>
     </modules>
     <dependencies>
