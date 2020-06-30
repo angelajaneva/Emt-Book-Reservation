@@ -27,6 +27,10 @@ public class Reservation extends AbstractEntity<ReservationId> {
     private BookId bookId;
 
     @Embedded
+    @AttributeOverride(name="id",column = @Column(name="user_id",nullable = false))
+    private UserId userId;
+
+    @Embedded
     @Column(name = "date_expiring", nullable = false)
     private DateExpiring dateExpiringReservation;
 
@@ -34,11 +38,12 @@ public class Reservation extends AbstractEntity<ReservationId> {
     @Column(name = "date_taking", nullable = false)
     private DateTaking dateTakingReservation;
 
-    public Reservation(@NonNull ReservationStatus status, @NonNull BookId bookId,
+    public Reservation(@NonNull ReservationStatus status, @NonNull BookId bookId, @NonNull UserId userId,
                        @NonNull DateExpiring dateExpiringReservation, @NonNull DateTaking dateTakingReservation) {
         super(DomainObjectId.randomId(ReservationId.class));
         this.status = status;
         this.bookId = bookId;
+        this.userId = userId;
         this.dateExpiringReservation = dateExpiringReservation;
         this.dateTakingReservation = dateTakingReservation;
     }
