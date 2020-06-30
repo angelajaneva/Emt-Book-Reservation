@@ -6,14 +6,14 @@ import mk.ukim.finki.emt.sharedkernel.domain.base.DomainObjectId;
 import javax.persistence.Embeddable;
 
 @Embeddable
-public class BookId extends DomainObjectId {
+public class UserId extends DomainObjectId {
 
-    private BookId() {
-        super(DomainObjectId.randomId(BookId.class).toString());
+    private UserId() {
+        super(DomainObjectId.randomId(UserId.class).toString());
     }
 
     @JsonCreator
-    public BookId(String id) {
+    public UserId(String id) {
         super(id);
     }
 
