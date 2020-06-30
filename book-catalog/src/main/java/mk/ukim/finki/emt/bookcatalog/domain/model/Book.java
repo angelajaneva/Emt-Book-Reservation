@@ -35,9 +35,9 @@ public class Book extends AbstractEntity<BookId> {
 
     @Embedded
     @AttributeOverrides({
-            @AttributeOverride(name = "first_name", column =
+            @AttributeOverride(name = "firstName", column =
             @Column(name = "author_first_name")),
-            @AttributeOverride(name = "last_name",
+            @AttributeOverride(name = "lastName",
                     column = @Column(name = "author_last_name"))
     })
     private Author author;
