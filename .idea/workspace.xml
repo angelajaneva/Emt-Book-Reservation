@@ -20,11 +20,20 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2ddaf40d-7165-45db-b682-fc648a5efdec" name="Default Changelist" comment="Quantity and Price value object">
-      <change afterPath="$PROJECT_DIR$/reservation/src/main/java/mk/ukim/finki/emt/reservation/domain/event/BookReturned.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/reservation/src/main/java/mk/ukim/finki/emt/reservation/application/BookCatalog.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/reservation/src/main/java/mk/ukim/finki/emt/reservation/domain/model/Book.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/reservation/src/main/java/mk/ukim/finki/emt/reservation/port/client/BookCatalogClient.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/book-catalog/src/main/java/mk/ukim/finki/emt/bookcatalog/integration/BookReturnedEventTranslator.java" beforeDir="false" afterPath="$PROJECT_DIR$/book-catalog/src/main/java/mk/ukim/finki/emt/bookcatalog/integration/BookReturnedEventTranslator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/book-catalog/src/main/java/mk/ukim/finki/emt/bookcatalog/integration/ReservationCreatedEventTranslator.java" beforeDir="false" afterPath="$PROJECT_DIR$/book-catalog/src/main/java/mk/ukim/finki/emt/bookcatalog/integration/ReservationCreatedEventTranslator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/reservation/src/main/java/mk/ukim/finki/emt/reservation/domain/event/ReservationCreated.java" beforeDir="false" afterPath="$PROJECT_DIR$/reservation/src/main/java/mk/ukim/finki/emt/reservation/domain/event/ReservationCreated.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/book-catalog/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/book-catalog/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/fine-management/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/fine-management/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/reservation/src/main/java/mk/ukim/finki/emt/reservation/domain/model/BookId.java" beforeDir="false" afterPath="$PROJECT_DIR$/reservation/src/main/java/mk/ukim/finki/emt/reservation/domain/model/BookId.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/reservation/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/reservation/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shared-kernel/src/main/java/mk/ukim/finki/emt/sharedkernel/domain/base/AbstractEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/shared-kernel/src/main/java/mk/ukim/finki/emt/sharedkernel/domain/base/AbstractEntity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shared-kernel/src/main/java/mk/ukim/finki/emt/sharedkernel/domain/base/DomainEvent.java" beforeDir="false" afterPath="$PROJECT_DIR$/shared-kernel/src/main/java/mk/ukim/finki/emt/sharedkernel/domain/base/DomainEvent.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shared-kernel/src/main/java/mk/ukim/finki/emt/sharedkernel/domain/base/DomainObjectId.java" beforeDir="false" afterPath="$PROJECT_DIR$/shared-kernel/src/main/java/mk/ukim/finki/emt/sharedkernel/domain/base/DomainObjectId.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shared-kernel/src/main/java/mk/ukim/finki/emt/sharedkernel/domain/base/IdentifiableDomainObject.java" beforeDir="false" afterPath="$PROJECT_DIR$/shared-kernel/src/main/java/mk/ukim/finki/emt/sharedkernel/domain/base/IdentifiableDomainObject.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shared-kernel/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/shared-kernel/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user-subscription/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/user-subscription/src/main/resources/application.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -230,10 +239,10 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="1141" y="246" key="#com.intellij.ide.util.MemberChooser" timestamp="1593546092818">
+    <state x="1141" y="246" key="#com.intellij.ide.util.MemberChooser" timestamp="1593550406376">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="1141" y="246" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1593546092818" />
+    <state x="1141" y="246" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1593550406376" />
     <state x="419" y="444" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog" timestamp="1593180233033">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>

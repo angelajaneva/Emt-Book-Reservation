@@ -2,8 +2,16 @@ package mk.ukim.finki.emt.sharedkernel.domain.base;
 
 import org.springframework.data.util.ProxyUtils;
 
-public class AbstractEntity<ID extends mk.ukim.finki.emt.sharedkernel.domain.base.DomainObjectId> implements mk.ukim.finki.emt.sharedkernel.domain.base.IdentifiableDomainObject<ID> {
+import javax.persistence.EmbeddedId;
+import javax.persistence.MappedSuperclass;
 
+import lombok.Getter;
+
+@Getter
+@MappedSuperclass
+public abstract class AbstractEntity<ID extends DomainObjectId> implements IdentifiableDomainObject<ID> {
+
+    @EmbeddedId
     private ID id;
 
     public AbstractEntity(){

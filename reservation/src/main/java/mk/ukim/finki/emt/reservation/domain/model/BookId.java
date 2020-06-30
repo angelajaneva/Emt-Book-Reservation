@@ -4,6 +4,7 @@ import com.fasterxml.jackson.annotation.JsonCreator;
 import mk.ukim.finki.emt.sharedkernel.domain.base.DomainObjectId;
 
 import javax.persistence.Embeddable;
+import lombok.Getter;
 
 @Embeddable
 public class BookId extends DomainObjectId {

@@ -8,5 +8,5 @@ public interface DomainEvent extends DomainObject {
 
     @NonNull
     Instant occurredOn();
-
 }
+
