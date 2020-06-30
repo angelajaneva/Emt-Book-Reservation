@@ -20,7 +20,7 @@ public class BookReturnedEventTranslator implements RemoteEventTranslator {
 
     @Override
     public boolean supports(StoredDomainEvent remoteEvent) {
-        return remoteEvent.domainEventClassName().equals("mk.ukim.finki.emt.bookcatalog.integration.BookReturnedEvent");
+        return remoteEvent.domainEventClassName().equals("mk.ukim.finki.emt.reservation.domain.event.BookReturned");
     }
 
     @Override
