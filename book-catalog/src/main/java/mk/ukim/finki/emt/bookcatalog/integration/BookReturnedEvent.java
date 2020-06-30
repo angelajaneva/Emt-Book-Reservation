@@ -3,6 +3,7 @@ package mk.ukim.finki.emt.bookcatalog.integration;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.NonNull;
+import lombok.Getter;
 import mk.ukim.finki.emt.bookcatalog.domain.model.BookId;
 import mk.ukim.finki.emt.bookcatalog.domain.model.ReservationId;
 import mk.ukim.finki.emt.sharedkernel.domain.base.DomainEvent;
@@ -10,6 +11,7 @@ import mk.ukim.finki.emt.sharedkernel.domain.base.DomainEvent;
 import java.time.Instant;
 import java.util.Objects;
 
+@Getter
 public class BookReturnedEvent implements DomainEvent {
 
     @JsonProperty("bookId")

@@ -31,10 +31,14 @@ public class ReservationCreatedEvent implements DomainEvent {
     }
 
     @NonNull
-    public ReservationId reservationId() {
+    public ReservationId getReservationId() {
         return reservationId;
     }
 
+    @NonNull
+    public BookId getBookId() {
+        return bookId;
+    }
 
     @Override
     public Instant occurredOn() {

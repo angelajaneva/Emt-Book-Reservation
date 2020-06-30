@@ -72,4 +72,14 @@ public class Book extends AbstractEntity<BookId> {
         this.price = Money.valueOf(money);
         this.quantity = Quantity.valueOf(quantity);
     }
+
+    public void decrementQuantity() {
+       this.quantity = this.quantity.decrement();
+    }
+
+    public void incrementQuantity() {
+        this.quantity = this.quantity.increment();
+    }
+
+
 }

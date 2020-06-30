@@ -48,6 +48,18 @@ public class Quantity implements ValueObject {
         return new Quantity(this.quantity - quantity);
     }
 
+    public Quantity decrement(){
+        if (this.quantity == 0){
+            throw new IllegalArgumentException("Quantity must be positive number");
+        }
+
+        return new Quantity(this.quantity - 1);
+    }
+
+    public Quantity increment(){
+        return new Quantity(this.quantity + 1);
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
