@@ -7,7 +7,10 @@ import javax.persistence.Embeddable;
 @Embeddable
 public class UserId extends DomainObjectId {
 
+    private String id;
+
     public UserId(String id) {
         super(id);
+        this.id = id;
     }
 }
