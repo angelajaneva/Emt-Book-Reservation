@@ -47,4 +47,9 @@ public class Reservation extends AbstractEntity<ReservationId> {
         this.dateExpiringReservation = dateExpiringReservation;
         this.dateTakingReservation = dateTakingReservation;
     }
+
+    public void changeReservationStatus(@NonNull ReservationStatus reservationStatus){
+        this.status = reservationStatus;
+    }
+
 }

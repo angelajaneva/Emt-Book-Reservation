@@ -36,11 +36,9 @@ public class BookCatalogClient implements BookCatalog {
         restTemplate.setRequestFactory(requestFactory);
     }
 
-
     private UriComponentsBuilder uri() {
         return UriComponentsBuilder.fromUriString(serverUrl);
     }
-
 
 
     @Override

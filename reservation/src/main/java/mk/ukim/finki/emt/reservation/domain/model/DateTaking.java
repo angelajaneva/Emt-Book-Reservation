@@ -1,13 +1,15 @@
 package mk.ukim.finki.emt.reservation.domain.model;
 
 import mk.ukim.finki.emt.sharedkernel.domain.base.ValueObject;
-import org.springframework.lang.NonNull;
+import lombok.NonNull;
+import lombok.Getter;
 
 import javax.persistence.Embeddable;
 import java.time.LocalDate;
 import java.util.Objects;
 
 @Embeddable
+@Getter
 public class DateTaking implements ValueObject {
 
     private LocalDate dateTaking;
