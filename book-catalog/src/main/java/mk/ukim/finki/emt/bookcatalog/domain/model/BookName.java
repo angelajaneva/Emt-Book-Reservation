@@ -5,9 +5,11 @@ import mk.ukim.finki.emt.sharedkernel.domain.base.ValueObject;
 
 import javax.persistence.Embeddable;
 import java.util.Objects;
+import lombok.Getter;
 
 @Embeddable
 @NoArgsConstructor
+@Getter
 public class BookName implements ValueObject {
 
 

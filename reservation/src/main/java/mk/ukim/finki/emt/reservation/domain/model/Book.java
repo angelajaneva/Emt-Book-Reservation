@@ -5,10 +5,9 @@ import lombok.Getter;
 import mk.ukim.finki.emt.sharedkernel.domain.identity.Money;
 
 @Getter
-@AllArgsConstructor
 public class Book {
 
-    private BookId bookId;
+    private BookId id;
 
     private String bookName;
 
