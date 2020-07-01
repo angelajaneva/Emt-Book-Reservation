@@ -5,7 +5,9 @@ import mk.ukim.finki.emt.reservation.domain.model.Book;
 import mk.ukim.finki.emt.reservation.domain.model.BookId;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
+import org.springframework.context.annotation.PropertySource;
 import org.springframework.core.ParameterizedTypeReference;
 import org.springframework.http.HttpMethod;
 import org.springframework.http.client.SimpleClientHttpRequestFactory;
@@ -17,6 +19,7 @@ import java.util.Collections;
 import java.util.List;
 
 @Service
+//@PropertySource(ignoreResourceNotFound = true,value={"classpath:book-catalog.properties"})
 public class BookCatalogClient implements BookCatalog {
 
     private static final Logger LOGGER = LoggerFactory.getLogger(BookCatalogClient.class);
@@ -35,6 +38,7 @@ public class BookCatalogClient implements BookCatalog {
         requestFactory.setReadTimeout(readTimeout);
         restTemplate.setRequestFactory(requestFactory);
     }
+
 
     private UriComponentsBuilder uri() {
         return UriComponentsBuilder.fromUriString(serverUrl);
