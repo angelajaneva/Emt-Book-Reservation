@@ -72,8 +72,9 @@ public class ReservationCatalog {
     private Reservation toDomainModel(ReservationForm reservationForm){
         //1 mesec vreme za vrakjanje
         var expiringDate = new DateExpiring(reservationForm.getDateTakingReservation().getDateTaking().plusMonths(1L));
-
-        return new Reservation(ReservationStatus.Processing, reservationForm.getBookId(), reservationForm.getUserId(), expiringDate, reservationForm.getDateTakingReservation());
+        //preku bookCatalog se prave povik kon modulot za book
+        var bookId = bookCatalog.findById(reservationForm.getBookId()).getId();
+        return new Reservation(ReservationStatus.Processing, bookId, reservationForm.getUserId(), expiringDate, reservationForm.getDateTakingReservation());
     }
 
 }

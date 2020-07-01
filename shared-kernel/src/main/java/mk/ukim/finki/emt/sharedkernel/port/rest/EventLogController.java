@@ -23,6 +23,7 @@ public class EventLogController {
     @GetMapping(path="/{lastProcessedId}")
     public ResponseEntity<List<StoredDomainEvent>> domainEvents(@PathVariable("lastProcessedId") long lastProcessedId) {
         var responseBuilder = ResponseEntity.ok();
+        //za da gi vrate events koi ne se isprocesirani
         return responseBuilder.body(domainEventLogService.retrieveLog(lastProcessedId));
     }
 }

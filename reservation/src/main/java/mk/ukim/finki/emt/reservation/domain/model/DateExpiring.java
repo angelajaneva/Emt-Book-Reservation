@@ -15,6 +15,9 @@ public class DateExpiring implements ValueObject {
     private LocalDate dateExpiring;
     private boolean expired;
 
+    public DateExpiring(){
+        dateExpiring = LocalDate.now();
+    }
 
     public DateExpiring(@NonNull LocalDate dateExpiring) {
 //        //datata sto e now() plus 3 dena

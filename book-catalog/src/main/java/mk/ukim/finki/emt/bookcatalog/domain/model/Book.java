@@ -1,5 +1,6 @@
 package mk.ukim.finki.emt.bookcatalog.domain.model;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import mk.ukim.finki.emt.sharedkernel.domain.base.AbstractEntity;
@@ -81,5 +82,25 @@ public class Book extends AbstractEntity<BookId> {
         this.quantity = this.quantity.increment();
     }
 
+    @JsonProperty("bookName")
+    public String getName(){
+        return bookName.getBookName();
+    }
+
+    public void setPrice(Money money){
+        this.price = money;
+    }
+
+    public Money getPrice(){
+        return price;
+    }
+
+    public void setQuantity(int q){
+        this.quantity = Quantity.valueOf(q);
+    }
+
+    public int getQuantity(){
+        return this.quantity.getQuantity();
+    }
 
 }

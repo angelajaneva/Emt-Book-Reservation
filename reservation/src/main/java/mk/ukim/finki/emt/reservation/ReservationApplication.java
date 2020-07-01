@@ -11,7 +11,6 @@ import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 @EnableJpaRepositories
 @EntityScan
 @Import(SharedConfiguration.class)
-
 public class ReservationApplication {
 
     public static void main(String[] args) {

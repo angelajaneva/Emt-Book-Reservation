@@ -29,7 +29,7 @@ public class DataGenerator {
     @Transactional
     public void generateData(){
         var books = bookRepository.findAll();
-        var reservation = reservationRepository.createReservation(makeReservation(books.get(0).getBookId(), new UserId("1")));
+        var reservation = reservationRepository.createReservation(makeReservation(books.get(0).getId(), new UserId("1")));
         System.out.println(reservation);
     }
 

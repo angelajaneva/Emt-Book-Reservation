@@ -14,6 +14,10 @@ public class DateTaking implements ValueObject {
 
     private LocalDate dateTaking;
 
+    public DateTaking(){
+        dateTaking = LocalDate.now();
+    }
+
     public DateTaking(@NonNull LocalDate dateTaking) {
         this.dateTaking = dateTaking;
     }
