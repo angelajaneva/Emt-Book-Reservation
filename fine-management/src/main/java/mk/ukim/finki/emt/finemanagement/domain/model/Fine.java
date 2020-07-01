@@ -12,8 +12,8 @@ import javax.persistence.*;
 @NoArgsConstructor
 public class Fine extends AbstractEntity<FineId> {
 
-    @EmbeddedId
-    private FineId id;
+//    @EmbeddedId
+//    private FineId id;
 
     @Embedded
     @Column(name = "price", nullable = false)

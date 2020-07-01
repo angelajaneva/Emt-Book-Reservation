@@ -22,9 +22,9 @@ import java.util.List;
 @AllArgsConstructor
 public class User extends AbstractEntity<UserId> {
 
-    @EmbeddedId
-    @Column(name = "user_id")
-    private UserId id;
+//    @EmbeddedId
+//    @Column(name = "user_id")
+//    private UserId id;
 
     //vo slucaj ako mu se pise kazna a toj saka vo toj moment kniga da rezervira
     @Version

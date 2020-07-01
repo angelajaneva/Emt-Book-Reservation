@@ -14,9 +14,9 @@ import javax.persistence.*;
 @NoArgsConstructor
 public class Reservation extends AbstractEntity<ReservationId> {
 
-    @EmbeddedId
-    @Column(name = "reservation_id")
-    private ReservationId id;
+//    @EmbeddedId
+//    @Column(name = "reservation_id")
+//    private ReservationId id;
 
     @Enumerated(EnumType.STRING)
     @Column(name = "status")

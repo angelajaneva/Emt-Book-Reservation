@@ -18,9 +18,9 @@ import javax.persistence.*;
 @NoArgsConstructor
 public class Book extends AbstractEntity<BookId> {
 
-    @EmbeddedId
-    @Column(name = "book_id")
-    private BookId id;
+//    @EmbeddedId
+//    @Column(name = "book_id")
+//    private BookId id;
 
     @Version
     private Long version = 0L;
