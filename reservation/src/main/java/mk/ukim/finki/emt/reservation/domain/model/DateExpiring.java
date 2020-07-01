@@ -1,23 +1,25 @@
 package mk.ukim.finki.emt.reservation.domain.model;
 
 import mk.ukim.finki.emt.sharedkernel.domain.base.ValueObject;
-import org.springframework.lang.NonNull;
+import lombok.NonNull;
+import lombok.Getter;
 
 import javax.persistence.Embeddable;
 import java.time.LocalDate;
 import java.util.Objects;
 
 @Embeddable
+@Getter
 public class DateExpiring implements ValueObject {
 
     private LocalDate dateExpiring;
     private boolean expired;
 
 
-    public DateExpiring(@NonNull LocalDate date) {
+    public DateExpiring(@NonNull LocalDate dateExpiring) {
 //        //datata sto e now() plus 3 dena
 //        this.dateExpiring = date.plusDays(3L);
-        this.dateExpiring = date;
+        this.dateExpiring = dateExpiring;
         setExpired();
     }
 

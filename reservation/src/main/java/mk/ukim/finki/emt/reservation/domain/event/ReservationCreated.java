@@ -36,8 +36,13 @@ public class ReservationCreated implements DomainEvent {
         return reservationId;
     }
 
+    @NonNull
+    public BookId bookId() {
+        return bookId;
+    }
 
     @Override
+    @NonNull
     public Instant occurredOn() {
         return occurredOn;
     }

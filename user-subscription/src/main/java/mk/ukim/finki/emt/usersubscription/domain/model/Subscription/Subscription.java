@@ -20,9 +20,9 @@ import java.util.List;
 //@AllArgsConstructor
 public class Subscription extends AbstractEntity<SubscriptionId> {
 
-    @EmbeddedId
-    @Column(name = "subscription_id")
-    private SubscriptionId id;
+//    @EmbeddedId
+//    @Column(name = "subscription_id")
+//    private SubscriptionId id;
 
     @Enumerated(EnumType.STRING)
     @Column(name = "subscription_type", nullable = false)

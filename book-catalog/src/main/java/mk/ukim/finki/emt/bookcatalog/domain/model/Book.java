@@ -18,9 +18,9 @@ import javax.persistence.*;
 @NoArgsConstructor
 public class Book extends AbstractEntity<BookId> {
 
-    @EmbeddedId
-    @Column(name = "book_id")
-    private BookId id;
+//    @EmbeddedId
+//    @Column(name = "book_id")
+//    private BookId id;
 
     @Version
     private Long version = 0L;
@@ -72,4 +72,14 @@ public class Book extends AbstractEntity<BookId> {
         this.price = Money.valueOf(money);
         this.quantity = Quantity.valueOf(quantity);
     }
+
+    public void decrementQuantity() {
+       this.quantity = this.quantity.decrement();
+    }
+
+    public void incrementQuantity() {
+        this.quantity = this.quantity.increment();
+    }
+
+
 }

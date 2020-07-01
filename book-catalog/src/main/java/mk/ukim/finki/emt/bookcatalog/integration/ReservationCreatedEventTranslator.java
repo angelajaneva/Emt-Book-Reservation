@@ -20,8 +20,10 @@ public class ReservationCreatedEventTranslator implements RemoteEventTranslator 
 
     @Override
     public boolean supports(StoredDomainEvent remoteEvent) {
-        return remoteEvent.domainEventClassName().equals("mk.ukim.finki.emt.bookcatalog.integration.ReservationCreatedEvent");
-
+        //voa e mislam greska greba kon reservation.domain.events
+        //return remoteEvent.domainEventClassName().equals("mk.ukim.finki.emt.bookcatalog.integration.ReservationCreatedEvent");
+        //treba da probame vaka
+        return remoteEvent.domainEventClassName().equals("mk.ukim.finki.emt.reservation.domain.event.ReservationCreated");
     }
 
     @Override

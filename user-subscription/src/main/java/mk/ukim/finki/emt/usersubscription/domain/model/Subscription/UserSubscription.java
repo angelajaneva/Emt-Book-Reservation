@@ -21,9 +21,9 @@ import java.util.Date;
 @AllArgsConstructor
 public class UserSubscription extends AbstractEntity<UserSubscriptionId> {
 
-    @EmbeddedId
-    @Column(name = "id")
-    private UserSubscriptionId id;
+//    @EmbeddedId
+//    @Column(name = "id")
+//    private UserSubscriptionId id;
 
     @ManyToOne
     @JsonManagedReference
