@@ -7,7 +7,6 @@ import javax.persistence.Embeddable;
 import java.util.Objects;
 
 @Embeddable
-@NoArgsConstructor
 public class SubscriptionId extends DomainObjectId {
 
     private String id;
