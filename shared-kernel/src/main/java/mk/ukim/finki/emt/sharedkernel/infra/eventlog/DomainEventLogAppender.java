@@ -3,12 +3,12 @@ package mk.ukim.finki.emt.sharedkernel.infra.eventlog;
 
 import lombok.NonNull;
 import mk.ukim.finki.emt.sharedkernel.domain.base.DomainEvent;
+import org.springframework.context.event.EventListener;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.event.TransactionPhase;
 import org.springframework.transaction.event.TransactionalEventListener;
 
 @Service
-
 public class DomainEventLogAppender {
 
     private final DomainEventLogService domainEventLogService;
@@ -17,7 +17,7 @@ public class DomainEventLogAppender {
         this.domainEventLogService = domainEventLogService;
     }
 
-    @TransactionalEventListener(phase = TransactionPhase.BEFORE_COMMIT)
+    @EventListener
     public void onDomainEvent(@NonNull DomainEvent domainEvent) {
         domainEventLogService.append(domainEvent);
     }
