@@ -56,4 +56,9 @@ public class DateExpiring implements ValueObject {
         return sb.toString();
 
     }
+
+    public boolean checkExpired() {
+        return dateExpiring.isBefore(LocalDate.now());
+    }
+
 }

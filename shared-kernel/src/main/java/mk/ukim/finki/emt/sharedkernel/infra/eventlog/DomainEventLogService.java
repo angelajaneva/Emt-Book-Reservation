@@ -37,7 +37,6 @@ public class DomainEventLogService {
         if (max == null) {
             max = 0L;
         }
-        //novite events koi ne se isprocesirani
         return storedDomainEventRepository.findEventsBetween(lastProcessedEventId,max);
     }
 }

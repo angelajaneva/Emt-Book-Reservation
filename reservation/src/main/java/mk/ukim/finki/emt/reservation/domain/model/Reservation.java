@@ -51,5 +51,4 @@ public class Reservation extends AbstractEntity<ReservationId> {
     public void changeReservationStatus(@NonNull ReservationStatus reservationStatus){
         this.status = reservationStatus;
     }
-
 }
