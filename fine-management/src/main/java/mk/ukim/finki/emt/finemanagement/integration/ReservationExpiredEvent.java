@@ -1,16 +1,16 @@
-package mk.ukim.finki.emt.reservation.domain.event;
+package mk.ukim.finki.emt.finemanagement.integration;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import mk.ukim.finki.emt.reservation.domain.model.ReservationId;
-import mk.ukim.finki.emt.reservation.domain.model.UserId;
+import mk.ukim.finki.emt.finemanagement.domain.model.ReservationId;
+import mk.ukim.finki.emt.finemanagement.domain.model.UserId;
 import mk.ukim.finki.emt.sharedkernel.domain.base.DomainEvent;
 import org.springframework.lang.NonNull;
 
 import java.time.Instant;
 import java.util.Objects;
 
-public class ReservationExpired implements DomainEvent {
+public class ReservationExpiredEvent implements DomainEvent {
 
     @JsonProperty("reservationId")
     private final ReservationId reservationId;
@@ -20,7 +20,7 @@ public class ReservationExpired implements DomainEvent {
     private final UserId userId;
 
     @JsonCreator
-    public ReservationExpired(@JsonProperty("reservationId") @NonNull ReservationId reservationId,
+    public ReservationExpiredEvent(@JsonProperty("reservationId") @NonNull ReservationId reservationId,
                               @JsonProperty("occurredOn") @NonNull Instant occurredOn,
                               @JsonProperty("userId") @NonNull UserId userId) {
         this.reservationId = Objects.requireNonNull(reservationId, "reservationId must not be null");
@@ -45,5 +45,3 @@ public class ReservationExpired implements DomainEvent {
     }
 
 }
-
-

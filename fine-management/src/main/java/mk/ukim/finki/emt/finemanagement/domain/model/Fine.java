@@ -3,6 +3,7 @@ package mk.ukim.finki.emt.finemanagement.domain.model;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import mk.ukim.finki.emt.sharedkernel.domain.base.AbstractEntity;
+import mk.ukim.finki.emt.sharedkernel.domain.base.DomainObjectId;
 
 import javax.persistence.*;
 
@@ -29,4 +30,11 @@ public class Fine extends AbstractEntity<FineId> {
     @AttributeOverride(name="id",column = @Column(name="user_id",nullable = false))
     private UserId userId;
 
+    public Fine(Price price, FineDescription fineDescription, boolean paid, UserId userId) {
+        super(DomainObjectId.randomId(FineId.class));
+        this.price = price;
+        this.fineDescription = fineDescription;
+        this.paid = paid;
+        this.userId = userId;
+    }
 }

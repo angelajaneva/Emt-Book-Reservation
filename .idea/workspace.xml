@@ -20,14 +20,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2ddaf40d-7165-45db-b682-fc648a5efdec" name="Default Changelist" comment="Quantity and Price value object">
-      <change afterPath="$PROJECT_DIR$/reservation/src/main/java/mk/ukim/finki/emt/reservation/domain/event/ReservationExpired.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fine-management/src/main/java/mk/ukim/finki/emt/finemanagement/application/FineCatalog.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fine-management/src/main/java/mk/ukim/finki/emt/finemanagement/domain/model/ReservationId.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fine-management/src/main/java/mk/ukim/finki/emt/finemanagement/domain/repository/FineRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fine-management/src/main/java/mk/ukim/finki/emt/finemanagement/integration/ReservationExpiredEvent.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fine-management/src/main/java/mk/ukim/finki/emt/finemanagement/integration/ReservationExpiredEventTranslator.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/book-catalog/src/main/java/mk/ukim/finki/emt/bookcatalog/application/BookCatalog.java" beforeDir="false" afterPath="$PROJECT_DIR$/book-catalog/src/main/java/mk/ukim/finki/emt/bookcatalog/application/BookCatalog.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/fine-management/src/main/java/mk/ukim/finki/emt/finemanagement/domain/model/Fine.java" beforeDir="false" afterPath="$PROJECT_DIR$/fine-management/src/main/java/mk/ukim/finki/emt/finemanagement/domain/model/Fine.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/reservation/src/main/java/mk/ukim/finki/emt/reservation/application/ReservationCatalog.java" beforeDir="false" afterPath="$PROJECT_DIR$/reservation/src/main/java/mk/ukim/finki/emt/reservation/application/ReservationCatalog.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/reservation/src/main/java/mk/ukim/finki/emt/reservation/domain/model/DateExpiring.java" beforeDir="false" afterPath="$PROJECT_DIR$/reservation/src/main/java/mk/ukim/finki/emt/reservation/domain/model/DateExpiring.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/reservation/src/main/java/mk/ukim/finki/emt/reservation/domain/model/Reservation.java" beforeDir="false" afterPath="$PROJECT_DIR$/reservation/src/main/java/mk/ukim/finki/emt/reservation/domain/model/Reservation.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/shared-kernel/src/main/java/mk/ukim/finki/emt/sharedkernel/infra/eventlog/DomainEventLogService.java" beforeDir="false" afterPath="$PROJECT_DIR$/shared-kernel/src/main/java/mk/ukim/finki/emt/sharedkernel/infra/eventlog/DomainEventLogService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/shared-kernel/src/main/java/mk/ukim/finki/emt/sharedkernel/infra/eventlog/RemoteEventLogService.java" beforeDir="false" afterPath="$PROJECT_DIR$/shared-kernel/src/main/java/mk/ukim/finki/emt/sharedkernel/infra/eventlog/RemoteEventLogService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/shared-kernel/src/main/java/mk/ukim/finki/emt/sharedkernel/infra/eventlog/RemoteEventTranslator.java" beforeDir="false" afterPath="$PROJECT_DIR$/shared-kernel/src/main/java/mk/ukim/finki/emt/sharedkernel/infra/eventlog/RemoteEventTranslator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/reservation/src/main/java/mk/ukim/finki/emt/reservation/domain/event/ReservationExpired.java" beforeDir="false" afterPath="$PROJECT_DIR$/reservation/src/main/java/mk/ukim/finki/emt/reservation/domain/event/ReservationExpired.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shared-kernel/src/main/java/mk/ukim/finki/emt/sharedkernel/infra/eventlog/DomainEventLogAppender.java" beforeDir="false" afterPath="$PROJECT_DIR$/shared-kernel/src/main/java/mk/ukim/finki/emt/sharedkernel/infra/eventlog/DomainEventLogAppender.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/book-catalog/target/" />
@@ -50,77 +53,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/reservation/src/main/java/mk/ukim/finki/emt/reservation/domain/event/ReservationCreated.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="478">
-              <caret line="38" column="12" lean-forward="true" selection-end-line="49" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/shared-kernel/src/main/java/mk/ukim/finki/emt/sharedkernel/infra/eventlog/DomainEventLogAppender.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="320">
-              <caret line="20" column="31" lean-forward="true" selection-start-line="20" selection-start-column="31" selection-end-line="20" selection-end-column="31" />
-              <folding>
-                <element signature="e#716#717#0" expanded="true" />
-                <element signature="e#773#774#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/shared-kernel/src/main/java/mk/ukim/finki/emt/sharedkernel/infra/eventlog/DomainEventLogService.java">
+        <entry file="file://$PROJECT_DIR$/fine-management/src/main/java/mk/ukim/finki/emt/finemanagement/integration/ReservationExpiredEvent.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="278">
-              <caret line="29" column="40" selection-start-line="29" selection-start-column="40" selection-end-line="29" selection-end-column="40" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/reservation/src/main/java/mk/ukim/finki/emt/reservation/ReservationApplication.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="240">
-              <caret line="19" column="1" lean-forward="true" selection-start-line="19" selection-start-column="1" selection-end-line="19" selection-end-column="1" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/shared-kernel/src/main/java/mk/ukim/finki/emt/sharedkernel/infra/eventlog/RemoteEventProcessor.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="396">
-              <caret line="71" lean-forward="true" selection-start-line="71" selection-end-line="71" />
-              <folding>
-                <element signature="e#1724#1725#0" expanded="true" />
-                <element signature="e#1793#1794#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/reservation/src/main/java/mk/ukim/finki/emt/reservation/application/ReservationCatalog.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="340">
-              <caret line="68" column="12" lean-forward="true" selection-start-line="68" selection-start-column="12" selection-end-line="68" selection-end-column="12" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#2372#2373#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/reservation/src/main/java/mk/ukim/finki/emt/reservation/domain/event/ReservationExpired.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="538">
-              <caret line="34" column="12" lean-forward="true" selection-start-line="34" selection-start-column="12" selection-end-line="34" selection-end-column="12" />
+            <state relative-caret-position="101">
+              <caret line="25" column="67" selection-start-line="25" selection-start-column="67" selection-end-line="25" selection-end-column="67" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -129,32 +66,91 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/reservation/src/main/java/mk/ukim/finki/emt/reservation/domain/model/ReservationId.java">
+        <entry file="file://$PROJECT_DIR$/book-catalog/src/main/java/mk/ukim/finki/emt/bookcatalog/domain/model/ReservationId.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="100">
-              <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
+            <state relative-caret-position="120">
+              <caret line="6" column="28" lean-forward="true" selection-start-line="6" selection-start-column="28" selection-end-line="6" selection-end-column="28" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/reservation/src/main/java/mk/ukim/finki/emt/reservation/domain/model/Reservation.java">
+        <entry file="file://$PROJECT_DIR$/fine-management/src/main/java/mk/ukim/finki/emt/finemanagement/domain/model/ReservationId.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="618">
-              <caret line="54" lean-forward="true" selection-start-line="54" selection-end-line="54" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/reservation/src/main/java/mk/ukim/finki/emt/reservation/domain/model/DateExpiring.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="318">
-              <caret line="53" column="24" lean-forward="true" selection-start-line="53" selection-start-column="24" selection-end-line="53" selection-end-column="24" />
+            <state relative-caret-position="120">
+              <caret line="6" column="4" selection-start-line="6" selection-start-column="4" selection-end-line="6" selection-end-column="4" />
               <folding>
-                <element signature="e#1503#1504#0" expanded="true" />
-                <element signature="e#1564#1565#0" expanded="true" />
+                <element signature="e#211#212#0" expanded="true" />
+                <element signature="e#236#237#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/fine-management/src/main/java/mk/ukim/finki/emt/finemanagement/application/FineCatalog.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="20">
+              <caret line="1" lean-forward="true" selection-start-line="1" selection-end-line="1" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#266#267#0" expanded="true" />
+                <element signature="e#318#319#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/fine-management/src/main/java/mk/ukim/finki/emt/finemanagement/domain/model/Fine.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="140">
+              <caret line="20" column="12" selection-start-line="20" selection-start-column="12" selection-end-line="20" selection-end-column="17" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/book-catalog/src/main/java/mk/ukim/finki/emt/bookcatalog/domain/model/Book.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="169">
+              <caret line="65" column="41" lean-forward="true" selection-start-line="65" selection-start-column="41" selection-end-line="65" selection-end-column="41" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/fine-management/src/main/java/mk/ukim/finki/emt/finemanagement/domain/model/FineDescription.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="140">
+              <caret line="11" column="30" selection-start-line="11" selection-start-column="30" selection-end-line="11" selection-end-column="30" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/fine-management/src/main/java/mk/ukim/finki/emt/finemanagement/domain/model/Price.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="120">
+              <caret line="9" lean-forward="true" selection-start-line="9" selection-end-line="9" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/book-catalog/src/main/java/mk/ukim/finki/emt/bookcatalog/DataGenerator.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="67">
+              <caret line="25" column="117" selection-start-line="25" selection-start-column="117" selection-end-line="25" selection-end-column="117" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/book-catalog/src/main/java/mk/ukim/finki/emt/bookcatalog/domain/model/Description.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="101">
+              <caret line="12" lean-forward="true" selection-start-line="12" selection-end-line="12" />
             </state>
           </provider>
         </entry>
@@ -164,8 +160,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Interface" />
         <option value="Enum" />
+        <option value="Interface" />
         <option value="Class" />
       </list>
     </option>
@@ -180,19 +176,25 @@
         <option value="$PROJECT_DIR$/reservation/src/main/resources/application.properties" />
         <option value="$PROJECT_DIR$/shared-kernel/src/main/java/mk/ukim/finki/emt/sharedkernel/port/rest/EventLogController.java" />
         <option value="$PROJECT_DIR$/shared-kernel/src/main/java/mk/ukim/finki/emt/sharedkernel/infra/eventlog/RemoteEventProcessor.java" />
-        <option value="$PROJECT_DIR$/shared-kernel/src/main/java/mk/ukim/finki/emt/sharedkernel/infra/eventlog/RemoteEventLogService.java" />
         <option value="$PROJECT_DIR$/shared-kernel/src/main/java/mk/ukim/finki/emt/sharedkernel/infra/eventlog/RemoteEventTranslator.java" />
-        <option value="$PROJECT_DIR$/book-catalog/src/main/java/mk/ukim/finki/emt/bookcatalog/application/BookCatalog.java" />
         <option value="$PROJECT_DIR$/shared-kernel/src/main/java/mk/ukim/finki/emt/sharedkernel/infra/eventlog/StoredDomainEventRepository2.java" />
         <option value="$PROJECT_DIR$/shared-kernel/src/main/java/mk/ukim/finki/emt/sharedkernel/infra/eventlog/StoredDomainEventRepository.java" />
         <option value="$PROJECT_DIR$/shared-kernel/src/main/resources/application.properties" />
         <option value="$PROJECT_DIR$/shared-kernel/src/main/java/mk/ukim/finki/emt/sharedkernel/SharedKernelApplication.java" />
         <option value="$PROJECT_DIR$/shared-kernel/src/main/java/mk/ukim/finki/emt/sharedkernel/infra/eventlog/DomainEventLogService.java" />
-        <option value="$PROJECT_DIR$/shared-kernel/src/main/java/mk/ukim/finki/emt/sharedkernel/infra/eventlog/DomainEventLogAppender.java" />
         <option value="$PROJECT_DIR$/reservation/src/main/java/mk/ukim/finki/emt/reservation/domain/model/Reservation.java" />
         <option value="$PROJECT_DIR$/reservation/src/main/java/mk/ukim/finki/emt/reservation/domain/model/DateExpiring.java" />
         <option value="$PROJECT_DIR$/reservation/src/main/java/mk/ukim/finki/emt/reservation/domain/event/ReservationExpired.java" />
+        <option value="$PROJECT_DIR$/shared-kernel/src/main/java/mk/ukim/finki/emt/sharedkernel/infra/eventlog/RemoteEventLogService.java" />
+        <option value="$PROJECT_DIR$/fine-management/src/main/java/mk/ukim/finki/emt/finemanagement/domain/repository/FineRepository.java" />
         <option value="$PROJECT_DIR$/reservation/src/main/java/mk/ukim/finki/emt/reservation/application/ReservationCatalog.java" />
+        <option value="$PROJECT_DIR$/shared-kernel/src/main/java/mk/ukim/finki/emt/sharedkernel/infra/eventlog/DomainEventLogAppender.java" />
+        <option value="$PROJECT_DIR$/book-catalog/src/main/java/mk/ukim/finki/emt/bookcatalog/application/BookCatalog.java" />
+        <option value="$PROJECT_DIR$/fine-management/src/main/java/mk/ukim/finki/emt/finemanagement/integration/ReservationExpiredEventTranslator.java" />
+        <option value="$PROJECT_DIR$/fine-management/src/main/java/mk/ukim/finki/emt/finemanagement/domain/model/Fine.java" />
+        <option value="$PROJECT_DIR$/fine-management/src/main/java/mk/ukim/finki/emt/finemanagement/application/FineCatalog.java" />
+        <option value="$PROJECT_DIR$/fine-management/src/main/java/mk/ukim/finki/emt/finemanagement/domain/model/ReservationId.java" />
+        <option value="$PROJECT_DIR$/fine-management/src/main/java/mk/ukim/finki/emt/finemanagement/integration/ReservationExpiredEvent.java" />
       </list>
     </option>
   </component>
@@ -225,6 +227,148 @@
             <path>
               <item name="bookreservation" type="b2602c69:ProjectViewProjectNode" />
               <item name="bookreservation" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="bookreservation" type="b2602c69:ProjectViewProjectNode" />
+              <item name="bookreservation" type="462c0819:PsiDirectoryNode" />
+              <item name="book-catalog" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="bookreservation" type="b2602c69:ProjectViewProjectNode" />
+              <item name="bookreservation" type="462c0819:PsiDirectoryNode" />
+              <item name="book-catalog" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="bookreservation" type="b2602c69:ProjectViewProjectNode" />
+              <item name="bookreservation" type="462c0819:PsiDirectoryNode" />
+              <item name="book-catalog" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="bookreservation" type="b2602c69:ProjectViewProjectNode" />
+              <item name="bookreservation" type="462c0819:PsiDirectoryNode" />
+              <item name="book-catalog" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="bookreservation" type="b2602c69:ProjectViewProjectNode" />
+              <item name="bookreservation" type="462c0819:PsiDirectoryNode" />
+              <item name="book-catalog" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="bookcatalog" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="bookreservation" type="b2602c69:ProjectViewProjectNode" />
+              <item name="bookreservation" type="462c0819:PsiDirectoryNode" />
+              <item name="book-catalog" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="bookcatalog" type="462c0819:PsiDirectoryNode" />
+              <item name="domain" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="bookreservation" type="b2602c69:ProjectViewProjectNode" />
+              <item name="bookreservation" type="462c0819:PsiDirectoryNode" />
+              <item name="book-catalog" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="bookcatalog" type="462c0819:PsiDirectoryNode" />
+              <item name="domain" type="462c0819:PsiDirectoryNode" />
+              <item name="model" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="bookreservation" type="b2602c69:ProjectViewProjectNode" />
+              <item name="bookreservation" type="462c0819:PsiDirectoryNode" />
+              <item name="book-catalog" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="bookcatalog" type="462c0819:PsiDirectoryNode" />
+              <item name="integration" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="bookreservation" type="b2602c69:ProjectViewProjectNode" />
+              <item name="bookreservation" type="462c0819:PsiDirectoryNode" />
+              <item name="fine-management" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="bookreservation" type="b2602c69:ProjectViewProjectNode" />
+              <item name="bookreservation" type="462c0819:PsiDirectoryNode" />
+              <item name="fine-management" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="bookreservation" type="b2602c69:ProjectViewProjectNode" />
+              <item name="bookreservation" type="462c0819:PsiDirectoryNode" />
+              <item name="fine-management" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="bookreservation" type="b2602c69:ProjectViewProjectNode" />
+              <item name="bookreservation" type="462c0819:PsiDirectoryNode" />
+              <item name="fine-management" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="bookreservation" type="b2602c69:ProjectViewProjectNode" />
+              <item name="bookreservation" type="462c0819:PsiDirectoryNode" />
+              <item name="fine-management" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="finemanagement" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="bookreservation" type="b2602c69:ProjectViewProjectNode" />
+              <item name="bookreservation" type="462c0819:PsiDirectoryNode" />
+              <item name="fine-management" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="finemanagement" type="462c0819:PsiDirectoryNode" />
+              <item name="application" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="bookreservation" type="b2602c69:ProjectViewProjectNode" />
+              <item name="bookreservation" type="462c0819:PsiDirectoryNode" />
+              <item name="fine-management" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="finemanagement" type="462c0819:PsiDirectoryNode" />
+              <item name="domain" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="bookreservation" type="b2602c69:ProjectViewProjectNode" />
+              <item name="bookreservation" type="462c0819:PsiDirectoryNode" />
+              <item name="fine-management" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="finemanagement" type="462c0819:PsiDirectoryNode" />
+              <item name="domain" type="462c0819:PsiDirectoryNode" />
+              <item name="model" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="bookreservation" type="b2602c69:ProjectViewProjectNode" />
+              <item name="bookreservation" type="462c0819:PsiDirectoryNode" />
+              <item name="fine-management" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="finemanagement" type="462c0819:PsiDirectoryNode" />
+              <item name="integration" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="bookreservation" type="b2602c69:ProjectViewProjectNode" />
@@ -331,6 +475,7 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="mk.ukim.finki.emt.finemanagement.domain" />
       <recent name="mk.ukim.finki.emt.bookcatalog.domain" />
       <recent name="mk.ukim.finki.emt.sharedkernel.domain" />
       <recent name="mk.ukim.finki.emt.sharedkernel" />
@@ -361,7 +506,7 @@
     </option>
     <option name="contentProportion" value="0.24829002" />
   </component>
-  <component name="RunManager" selected="Spring Boot.ReservationApplication">
+  <component name="RunManager" selected="Spring Boot.FineManagementApplication">
     <configuration name="BookCatalogApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
       <module name="book-catalog" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="mk.ukim.finki.emt.bookcatalog.BookCatalogApplication" />
@@ -416,12 +561,12 @@
       <workItem from="1593530317055" duration="2820000" />
       <workItem from="1593593510987" duration="19201000" />
       <workItem from="1593616884776" duration="19773000" />
-      <workItem from="1593764814725" duration="2589000" />
+      <workItem from="1593764814725" duration="6080000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="22362000" />
+    <option name="totallyTimeSpent" value="25853000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -436,7 +581,7 @@
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24295302" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24228188" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -459,7 +604,7 @@
       <window_info anchor="bottom" id="Java Enterprise" order="12" weight="0.3286119" />
       <window_info anchor="bottom" id="Database Changes" order="13" />
       <window_info anchor="bottom" id="Version Control" order="14" weight="0.3286119" />
-      <window_info anchor="bottom" id="Run Dashboard" order="15" weight="0.31444758" />
+      <window_info anchor="bottom" id="Run Dashboard" order="15" visible="true" weight="0.27903682" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -670,73 +815,10 @@
     <SUITE FILE_PATH="coverage/bookreservation$UserSubscriptionApplication.ic" NAME="UserSubscriptionApplication Coverage Results" MODIFIED="1593287814313" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/book-catalog/src/main/java/mk/ukim/finki/emt/bookcatalog/domain/model/Quantity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="149">
-          <caret line="26" column="27" selection-start-line="26" selection-start-column="27" selection-end-line="26" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/reservation/src/main/java/mk/ukim/finki/emt/reservation/application/form/ReservationForm.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="186">
-          <caret line="18" column="12" lean-forward="true" selection-start-line="18" selection-start-column="12" selection-end-line="18" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/reservation/src/main/java/mk/ukim/finki/emt/reservation/application/form/ChangeReservationStatusForm.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="280">
-          <caret line="17" column="37" lean-forward="true" selection-start-line="17" selection-start-column="37" selection-end-line="17" selection-end-column="37" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/reservation/src/main/java/mk/ukim/finki/emt/reservation/domain/event/BookReturned.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="80">
-          <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/reservation/src/main/java/mk/ukim/finki/emt/reservation/domain/model/Book.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="160">
-          <caret line="10" lean-forward="true" selection-start-line="10" selection-end-line="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/reservation/src/main/java/mk/ukim/finki/emt/reservation/domain/model/DateTaking.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="386">
-          <caret line="42" lean-forward="true" selection-start-line="42" selection-end-line="42" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/reservation/src/main/resources/application.properties">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="20" selection-start-column="20" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/book-catalog/src/main/java/mk/ukim/finki/emt/bookcatalog/domain/model/Book.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="71" lean-forward="true" selection-start-line="71" selection-end-line="71" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/book-catalog/src/main/java/mk/ukim/finki/emt/bookcatalog/port/rest/BookCatalogController.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="226">
           <caret line="24" column="24" lean-forward="true" selection-start-line="24" selection-start-column="24" selection-end-line="24" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/book-catalog/src/main/java/mk/ukim/finki/emt/bookcatalog/integration/BookReturnedEvent.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="280">
-          <caret line="23" lean-forward="true" selection-start-line="23" selection-end-line="23" />
         </state>
       </provider>
     </entry>
@@ -768,24 +850,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/book-catalog/src/main/java/mk/ukim/finki/emt/bookcatalog/DataGenerator.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="226">
-          <caret line="30" lean-forward="true" selection-start-line="30" selection-end-line="30" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/reservation/src/main/java/mk/ukim/finki/emt/reservation/port/client/BookCatalogClient.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="266">
           <caret line="59" column="26" lean-forward="true" selection-start-line="59" selection-start-column="26" selection-end-line="59" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/book-catalog/src/main/java/mk/ukim/finki/emt/bookcatalog/integration/BookReturnedEventTranslator.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="100">
-          <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
         </state>
       </provider>
     </entry>
@@ -810,20 +878,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/book-catalog/src/main/java/mk/ukim/finki/emt/bookcatalog/application/BookCatalog.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="44" lean-forward="true" selection-start-line="44" selection-end-line="44" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/shared-kernel/src/main/java/mk/ukim/finki/emt/sharedkernel/SharedConfiguration.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="13" selection-start-line="8" selection-end-line="13" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/book-catalog/src/main/java/mk/ukim/finki/emt/bookcatalog/BookCatalogApplication.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="128">
@@ -831,28 +885,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/shared-kernel/src/main/java/mk/ukim/finki/emt/sharedkernel/infra/eventlog/StoredDomainEventRepository.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="200">
-          <caret line="14" column="1" selection-start-line="14" selection-start-column="1" selection-end-line="14" selection-end-column="1" />
-          <folding>
-            <element signature="e#0#43#1" expanded="true" />
-            <element signature="e#0#88#1" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/shared-kernel/src/main/resources/application.properties">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="240">
           <caret line="30" column="24" lean-forward="true" selection-start-line="30" selection-start-column="24" selection-end-line="30" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/shared-kernel/src/main/java/mk/ukim/finki/emt/sharedkernel/SharedKernelApplication.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="80">
-          <caret line="5" column="22" lean-forward="true" selection-start-line="5" selection-start-column="22" selection-end-line="5" selection-end-column="22" />
         </state>
       </provider>
     </entry>
@@ -920,16 +956,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/shared-kernel/src/main/java/mk/ukim/finki/emt/sharedkernel/infra/eventlog/RemoteEventLogService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="80">
-          <caret line="5" column="8" selection-start-line="5" selection-start-column="8" selection-end-line="5" selection-end-column="8" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/shared-kernel/src/main/java/mk/ukim/finki/emt/sharedkernel/infra/eventlog/RemoteEventTranslator.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="160">
@@ -937,13 +963,6 @@
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/reservation/src/main/java/mk/ukim/finki/emt/reservation/application/BookCatalog.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="12" lean-forward="true" selection-start-line="12" selection-end-line="12" />
         </state>
       </provider>
     </entry>
@@ -958,17 +977,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="100">
           <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/shared-kernel/src/main/java/mk/ukim/finki/emt/sharedkernel/infra/eventlog/RemoteEventProcessor.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="396">
-          <caret line="71" lean-forward="true" selection-start-line="71" selection-end-line="71" />
-          <folding>
-            <element signature="e#1724#1725#0" expanded="true" />
-            <element signature="e#1793#1794#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -990,49 +998,243 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/reservation/src/main/java/mk/ukim/finki/emt/reservation/domain/event/ReservationExpired.java">
+    <entry file="file://$PROJECT_DIR$/reservation/src/main/java/mk/ukim/finki/emt/reservation/application/BookCatalog.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="538">
-          <caret line="34" column="12" lean-forward="true" selection-start-line="34" selection-start-column="12" selection-end-line="34" selection-end-column="12" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state relative-caret-position="180">
+          <caret line="12" lean-forward="true" selection-start-line="12" selection-end-line="12" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/reservation/src/main/java/mk/ukim/finki/emt/reservation/domain/model/Reservation.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="618">
-          <caret line="54" lean-forward="true" selection-start-line="54" selection-end-line="54" />
+        <state relative-caret-position="246">
+          <caret line="51" column="40" selection-start-line="51" selection-start-column="40" selection-end-line="51" selection-end-column="40" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/reservation/src/main/java/mk/ukim/finki/emt/reservation/application/ReservationCatalog.java">
+    <entry file="file://$PROJECT_DIR$/shared-kernel/src/main/java/mk/ukim/finki/emt/sharedkernel/infra/eventlog/StoredDomainEventRepository.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="68" column="12" lean-forward="true" selection-start-line="68" selection-start-column="12" selection-end-line="68" selection-end-column="12" />
+        <state relative-caret-position="220">
+          <caret line="15" lean-forward="true" selection-start-line="15" selection-end-line="15" />
           <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#2372#2373#0" expanded="true" />
+            <element signature="e#0#43#1" expanded="true" />
+            <element signature="e#0#88#1" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/shared-kernel/src/main/java/mk/ukim/finki/emt/sharedkernel/infra/eventlog/DomainEventLogAppender.java">
+    <entry file="file://$PROJECT_DIR$/shared-kernel/src/main/java/mk/ukim/finki/emt/sharedkernel/SharedConfiguration.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="320">
-          <caret line="20" column="31" lean-forward="true" selection-start-line="20" selection-start-column="31" selection-end-line="20" selection-end-column="31" />
+        <state relative-caret-position="220">
+          <caret line="15" lean-forward="true" selection-start-line="15" selection-end-line="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/shared-kernel/src/main/java/mk/ukim/finki/emt/sharedkernel/domain/base/DomainEvent.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="200">
+          <caret line="12" lean-forward="true" selection-start-line="12" selection-end-line="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/shared-kernel/src/main/java/mk/ukim/finki/emt/sharedkernel/infra/eventlog/RemoteEventLogService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="9" lean-forward="true" selection-start-line="9" selection-end-line="9" />
           <folding>
-            <element signature="e#716#717#0" expanded="true" />
-            <element signature="e#773#774#0" expanded="true" />
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/shared-kernel/src/main/java/mk/ukim/finki/emt/sharedkernel/infra/eventlog/DomainEventLogService.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="278">
-          <caret line="29" column="40" selection-start-line="29" selection-start-column="40" selection-end-line="29" selection-end-column="40" />
+        <state relative-caret-position="280">
+          <caret line="22" column="39" selection-start-line="22" selection-start-column="39" selection-end-line="22" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/shared-kernel/src/main/java/mk/ukim/finki/emt/sharedkernel/infra/eventlog/RemoteEventProcessor.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="103">
+          <caret line="61" column="63" lean-forward="true" selection-start-line="61" selection-start-column="63" selection-end-line="61" selection-end-column="63" />
+          <folding>
+            <element signature="e#1724#1725#0" expanded="true" />
+            <element signature="e#1793#1794#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/fine-management/src/main/java/mk/ukim/finki/emt/finemanagement/domain/repository/FineRepository.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="160">
+          <caret line="8" lean-forward="true" selection-start-line="8" selection-end-line="8" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/book-catalog/src/main/java/mk/ukim/finki/emt/bookcatalog/domain/repository/BookRepository.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="80">
+          <caret line="6" column="22" selection-start-line="6" selection-start-column="22" selection-end-line="6" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/reservation/src/main/java/mk/ukim/finki/emt/reservation/application/ReservationCatalog.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="20">
+          <caret line="37" lean-forward="true" selection-start-line="37" selection-end-line="37" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#2397#2398#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/shared-kernel/src/main/java/mk/ukim/finki/emt/sharedkernel/infra/eventlog/DomainEventLogAppender.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="20" selection-start-column="20" selection-end-column="20" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#716#717#0" expanded="true" />
+            <element signature="e#773#774#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/shared-kernel/src/main/java/mk/ukim/finki/emt/sharedkernel/SharedKernelApplication.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="160">
+          <caret line="11" lean-forward="true" selection-start-line="11" selection-end-line="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/book-catalog/src/main/java/mk/ukim/finki/emt/bookcatalog/application/BookCatalog.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="261">
+          <caret line="43" lean-forward="true" selection-start-line="26" selection-start-column="1" selection-end-line="43" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/book-catalog/src/main/java/mk/ukim/finki/emt/bookcatalog/integration/BookReturnedEvent.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret lean-forward="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/reservation/src/main/java/mk/ukim/finki/emt/reservation/domain/event/ReservationExpired.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="341">
+          <caret line="45" lean-forward="true" selection-start-line="12" selection-start-column="32" selection-end-line="45" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/fine-management/src/main/java/mk/ukim/finki/emt/finemanagement/integration/ReservationExpiredEventTranslator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="101">
+          <caret line="11" column="8" selection-start-line="11" selection-start-column="8" selection-end-line="11" selection-end-column="8" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/book-catalog/src/main/java/mk/ukim/finki/emt/bookcatalog/integration/BookReturnedEventTranslator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="380">
+          <caret line="27" column="62" lean-forward="true" selection-start-line="27" selection-start-column="62" selection-end-line="27" selection-end-column="62" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/book-catalog/src/main/java/mk/ukim/finki/emt/bookcatalog/DataGenerator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="67">
+          <caret line="25" column="117" selection-start-line="25" selection-start-column="117" selection-end-line="25" selection-end-column="117" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/book-catalog/src/main/java/mk/ukim/finki/emt/bookcatalog/domain/model/Description.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="101">
+          <caret line="12" lean-forward="true" selection-start-line="12" selection-end-line="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/fine-management/src/main/java/mk/ukim/finki/emt/finemanagement/domain/model/FineDescription.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="140">
+          <caret line="11" column="30" selection-start-line="11" selection-start-column="30" selection-end-line="11" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/fine-management/src/main/java/mk/ukim/finki/emt/finemanagement/domain/model/Price.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="9" lean-forward="true" selection-start-line="9" selection-end-line="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/book-catalog/src/main/java/mk/ukim/finki/emt/bookcatalog/domain/model/Book.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="169">
+          <caret line="65" column="41" lean-forward="true" selection-start-line="65" selection-start-column="41" selection-end-line="65" selection-end-column="41" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/fine-management/src/main/java/mk/ukim/finki/emt/finemanagement/domain/model/Fine.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="140">
+          <caret line="20" column="12" selection-start-line="20" selection-start-column="12" selection-end-line="20" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/fine-management/src/main/java/mk/ukim/finki/emt/finemanagement/application/FineCatalog.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="20">
+          <caret line="1" lean-forward="true" selection-start-line="1" selection-end-line="1" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#266#267#0" expanded="true" />
+            <element signature="e#318#319#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/book-catalog/src/main/java/mk/ukim/finki/emt/bookcatalog/domain/model/ReservationId.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="6" column="28" lean-forward="true" selection-start-line="6" selection-start-column="28" selection-end-line="6" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/fine-management/src/main/java/mk/ukim/finki/emt/finemanagement/domain/model/ReservationId.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="6" column="4" selection-start-line="6" selection-start-column="4" selection-end-line="6" selection-end-column="4" />
+          <folding>
+            <element signature="e#211#212#0" expanded="true" />
+            <element signature="e#236#237#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/fine-management/src/main/java/mk/ukim/finki/emt/finemanagement/integration/ReservationExpiredEvent.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="101">
+          <caret line="25" column="67" selection-start-line="25" selection-start-column="67" selection-end-line="25" selection-end-column="67" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

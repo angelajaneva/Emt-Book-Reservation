@@ -8,6 +8,7 @@ import org.springframework.transaction.event.TransactionPhase;
 import org.springframework.transaction.event.TransactionalEventListener;
 
 @Service
+
 public class DomainEventLogAppender {
 
     private final DomainEventLogService domainEventLogService;

@@ -14,8 +14,8 @@ import mk.ukim.finki.emt.reservation.domain.repository.ReservationRepository;
 import org.springframework.context.ApplicationEventPublisher;
 import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
-import javax.transaction.Transactional;
 import java.time.Instant;
 import java.util.List;
 import java.util.Objects;
@@ -66,15 +66,14 @@ public class ReservationCatalog {
             applicationEventPublisher.publishEvent(new BookReturned(reservation.getId(), reservation.getBookId(), Instant.now()));
         } else if (reservation.getStatus() == ReservationStatus.Expired) {
             //ovde treba si fine event da se publikuva
-            applicationEventPublisher.publishEvent(new ReservationExpired(reservation.getId(), Instant.now()));
-
+            applicationEventPublisher.publishEvent(new ReservationExpired(reservation.getId(), Instant.now(), reservation.getUserId()));
         }
         return reservation;
     }
 
-    //ednas vo denot
-    @Scheduled
-    private void expiredReservation() {
+
+    @Scheduled(cron = "0 0 12 * * ?")
+    public void expiredReservation() {
         List<Reservation> reservations = findAll();
         reservations.forEach(reservation -> {
             if (reservation.getDateExpiringReservation().checkExpired())
