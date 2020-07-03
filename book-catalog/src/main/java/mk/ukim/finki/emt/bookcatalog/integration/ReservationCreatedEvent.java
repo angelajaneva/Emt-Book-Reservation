@@ -5,11 +5,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import mk.ukim.finki.emt.bookcatalog.domain.model.BookId;
 import mk.ukim.finki.emt.bookcatalog.domain.model.ReservationId;
 import mk.ukim.finki.emt.sharedkernel.domain.base.DomainEvent;
-import org.springframework.lang.NonNull;
+import lombok.NonNull;
+import lombok.Getter;
 
 import java.time.Instant;
 import java.util.Objects;
 
+@Getter
 public class ReservationCreatedEvent implements DomainEvent {
 
 
@@ -22,22 +24,12 @@ public class ReservationCreatedEvent implements DomainEvent {
 
 
     @JsonCreator
-    public ReservationCreatedEvent(@JsonProperty("reservationId") @NonNull ReservationId reservationId,
-                              @JsonProperty("bookId") @NonNull BookId bookId,
-                              @JsonProperty("occurredOn") @NonNull Instant occurredOn) {
+    public ReservationCreatedEvent(ReservationId reservationId,
+                              BookId bookId,
+                              Instant occurredOn) {
         this.reservationId = Objects.requireNonNull(reservationId, "reservationId must not be null");
         this.bookId = Objects.requireNonNull(bookId, "bookId must not be null");
         this.occurredOn = Objects.requireNonNull(occurredOn, "occurredOn must not be null");
-    }
-
-    @NonNull
-    public ReservationId getReservationId() {
-        return reservationId;
-    }
-
-    @NonNull
-    public BookId getBookId() {
-        return bookId;
     }
 
     @Override
