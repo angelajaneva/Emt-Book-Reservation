@@ -17,8 +17,9 @@ public class DomainEventLogAppender {
         this.domainEventLogService = domainEventLogService;
     }
 
-    @EventListener
+    @TransactionalEventListener(phase = TransactionPhase.BEFORE_COMMIT)
     public void onDomainEvent(@NonNull DomainEvent domainEvent) {
+        System.out.println("vo append");
         domainEventLogService.append(domainEvent);
     }
 }

@@ -33,7 +33,7 @@ public class RemoteEventProcessor {
         this.transactionTemplate = transactionTemplate;
     }
 
-    @Scheduled(fixedDelay = 20000)
+    @Scheduled(fixedRate = 10000)
     public void processEvents() {
         remoteEventLogs.values().forEach(this::processEvents);
     }
@@ -41,9 +41,7 @@ public class RemoteEventProcessor {
     private void processEvents(@NonNull RemoteEventLogService remoteEventLogService) {
 
         var log = remoteEventLogService.currentLog(getLastProcessedId(remoteEventLogService));
-
         processEvents(remoteEventLogService, log.events());
-
     }
 
     private long getLastProcessedId(@NonNull RemoteEventLogService remoteEventLogService) {
@@ -66,10 +64,12 @@ public class RemoteEventProcessor {
     }
 
     private void setLastProcessedId(@NonNull RemoteEventLogService remoteEventLogService, long lastProcessedId) {
+        System.out.println("save");
         processedRemoteEventRepository.saveAndFlush(new ProcessedRemoteEvent(remoteEventLogService.source(), lastProcessedId));
     }
 
     private void publishEvent(@NonNull StoredDomainEvent event) {
+        System.out.println("vo procesor" + event.domainEventClassName());
         remoteEventTranslators.values().stream()
                 .filter(translator -> translator.supports(event))
                 .findFirst()

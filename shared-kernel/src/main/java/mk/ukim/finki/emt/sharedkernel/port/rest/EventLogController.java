@@ -24,6 +24,7 @@ public class EventLogController {
     public ResponseEntity<List<StoredDomainEvent>> domainEvents(@PathVariable("lastProcessedId") long lastProcessedId) {
         var responseBuilder = ResponseEntity.ok();
         //za da gi vrate events koi ne se isprocesirani
+        System.out.println("se povika event log controller");
         return responseBuilder.body(domainEventLogService.retrieveLog(lastProcessedId));
     }
 }

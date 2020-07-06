@@ -3,6 +3,7 @@ package mk.ukim.finki.emt.bookcatalog;
 import mk.ukim.finki.emt.bookcatalog.domain.model.*;
 import mk.ukim.finki.emt.bookcatalog.domain.repository.BookRepository;
 import mk.ukim.finki.emt.sharedkernel.domain.identity.Money;
+import org.springframework.boot.CommandLineRunner;
 import org.springframework.stereotype.Component;
 
 import javax.annotation.PostConstruct;
@@ -10,7 +11,7 @@ import javax.transaction.Transactional;
 import java.util.ArrayList;
 
 @Component
-public class DataGenerator {
+public class DataGenerator implements CommandLineRunner {
 
     private final BookRepository bookRepository;
 
@@ -18,8 +19,8 @@ public class DataGenerator {
         this.bookRepository = bookRepository;
     }
 
-    @PostConstruct
-    @Transactional
+//    @PostConstruct
+//    @Transactional
     public void generateData(){
         if (bookRepository.findAll().size()==0) {
             var books = new ArrayList<Book>();
@@ -35,4 +36,8 @@ public class DataGenerator {
         return new Book(bookName, quantity, author, description, genre, price.getAmount());
     }
 
+    @Override
+    public void run(String... args) throws Exception {
+        generateData();
+    }
 }
