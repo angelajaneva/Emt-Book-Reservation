@@ -6,6 +6,7 @@ import mk.ukim.finki.emt.bookcatalog.domain.model.BookId;
 import mk.ukim.finki.emt.bookcatalog.domain.repository.BookRepository;
 import mk.ukim.finki.emt.bookcatalog.integration.BookReturnedEvent;
 import mk.ukim.finki.emt.bookcatalog.integration.ReservationCreatedEvent;
+import org.springframework.context.event.EventListener;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 import org.springframework.transaction.event.TransactionPhase;

@@ -82,8 +82,9 @@ public class BookCatalogClient implements BookCatalog, RemoteEventLogService {
 
     @Override
     public RemoteEventLog currentLog(long lastProcessedId) {
-        URI currentLogUri = UriComponentsBuilder.fromUriString(source()).path
+        URI currentLogUri = UriComponentsBuilder.fromUriString(serverUrl).path
                 (String.format("/api/event-log/%d", lastProcessedId)).build().toUri();
+        System.out.println(lastProcessedId + "last ");
         return retrieveLog(currentLogUri);
     }
 
