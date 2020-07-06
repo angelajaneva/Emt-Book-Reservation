@@ -27,7 +27,7 @@ import java.util.List;
 
 @Service
 //@PropertySource(ignoreResourceNotFound = true,value={"classpath:book-catalog.properties"})
-public class BookCatalogClient implements BookCatalog, RemoteEventLogService {
+public class BookCatalogClient implements BookCatalog {
 
     private static final Logger LOGGER = LoggerFactory.getLogger(BookCatalogClient.class);
 
@@ -73,35 +73,30 @@ public class BookCatalogClient implements BookCatalog, RemoteEventLogService {
             return null;
         }
     }
+//
+//    @Override
+//    @NonNull
+//    public String source() {
+//        return "http://localhost:8082/";
+//    }
+//
+//    @Override
+//    public RemoteEventLog currentLog(long lastProcessedId) {
+//        URI currentLogUri = UriComponentsBuilder.fromUriString(source()).path
+//                (String.format("/api/event-log/%d", lastProcessedId)).build().toUri();
+//        System.out.println(lastProcessedId + "last ");
+//        return retrieveLog(currentLogUri);
+//    }
 
-    @Override
-    @NonNull
-    public String source() {
-        return "http://localhost:8082/";
-    }
-
-    @Override
-    public RemoteEventLog currentLog(long lastProcessedId) {
-        URI currentLogUri = UriComponentsBuilder.fromUriString(serverUrl).path
-                (String.format("/api/event-log/%d", lastProcessedId)).build().toUri();
-        System.out.println(lastProcessedId + "last ");
-        return retrieveLog(currentLogUri);
-    }
-
-    @NonNull
-    private RemoteEventLog retrieveLog(@NonNull URI uri) {
-        ResponseEntity<List<StoredDomainEvent>> response = restTemplate.exchange
-                (uri, HttpMethod.GET, null, new
-                        ParameterizedTypeReference<List<StoredDomainEvent>>() {
-                        });
-        if (response.getStatusCode() != HttpStatus.OK) {
-            throw new IllegalArgumentException("Could not retrieve log from URI " + uri);
-        }
-        return new RemoteEventLog() {
-            @Override
-            public List<StoredDomainEvent> events() {
-                return response.getBody();
-            }
-        };
-    }
+//    @NonNull
+//    private RemoteEventLog retrieveLog(@NonNull URI uri) {
+//        ResponseEntity<List<StoredDomainEvent>> response = restTemplate.exchange
+//                (uri, HttpMethod.GET, null, new
+//                        ParameterizedTypeReference<List<StoredDomainEvent>>() {
+//                        });
+//        if (response.getStatusCode() != HttpStatus.OK) {
+//            throw new IllegalArgumentException("Could not retrieve log from URI " + uri);
+//        }
+//        return response::getBody;
+//    }
 }

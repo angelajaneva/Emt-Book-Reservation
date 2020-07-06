@@ -47,6 +47,7 @@ public class BookCatalog {
     public void onReservationCreated(ReservationCreatedEvent reservationCreatedEvent){
         Book book = bookRepository.findById(reservationCreatedEvent.getBookId()).orElseThrow(RuntimeException::new);
         book.decrementQuantity();
+        System.out.println(book.getQuantity() + " quantity");
         bookRepository.save(book);
     }
 }

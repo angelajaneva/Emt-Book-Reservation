@@ -28,7 +28,7 @@ public class StoredDomainEvent {
     @Column(name = "id", nullable = false)
     @JsonProperty("id")
     private Long id;
-    @Column(name = "occurred_on", nullable = false)
+    @Column(name = "occurred_on")
     @JsonProperty("occurredOn")
     private Instant occurredOn;
     @Column(name = "domain_event_class_name", nullable = false)
