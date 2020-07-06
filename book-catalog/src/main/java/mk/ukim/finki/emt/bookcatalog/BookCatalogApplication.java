@@ -22,9 +22,9 @@ public class BookCatalogApplication {
     }
 
     @Bean
-    public RemoteEventLogService ReservationEvents(@Value("http://localhost:8082") String serverUrl,
-                                                   @Value("5000") int connectTimeout,
-                                                   @Value("5000") int readTimeout){
+    public RemoteEventLogService ReservationEvents(@Value("${app.reservation.url}") String serverUrl,
+                                                   @Value("${app.reservation.connect-timeout-ms}") int connectTimeout,
+                                                   @Value("${app.reservation.read-timeout-ms}") int readTimeout){
         return new RemoteEventLogServiceClient(serverUrl, connectTimeout, readTimeout);
     }
 }

@@ -61,8 +61,10 @@ public class ReservationCatalog {
     public void expiredReservation() {
         List<Reservation> reservations = findAll();
         reservations.forEach(reservation -> {
+            //checkExpired momentalno mi e netocen, za da testiram
             if (reservation.getDateExpiringReservation().checkExpired()) {
                 changeReservationStatus(new ChangeReservationStatusForm
+                        //za da proveram returned eventot stavam takov status
                         (reservation.getId(), ReservationStatus.Expired));
                 // ne ja brise vistinski od baza, napraveno e za da ne stignuva
                 //povekje pati kazna za istata rezervacija
@@ -84,9 +86,6 @@ public class ReservationCatalog {
                     reservation.getBookId(), Instant.now()));
 
         } else if (reservation.getStatus() == ReservationStatus.Expired) {
-            System.out.println("se publikuva expired event " + reservation.getId());
-            System.out.println("userId " + reservation.getUserId());
-            //ovde treba si fine event da se publikuva
             applicationEventPublisher.publishEvent(new ReservationExpired(reservation.getId(), Instant.now(), reservation.getUserId()));
         }
         return reservation;
