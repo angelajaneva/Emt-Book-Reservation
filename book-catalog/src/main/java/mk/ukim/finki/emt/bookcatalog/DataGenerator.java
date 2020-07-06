@@ -2,12 +2,10 @@ package mk.ukim.finki.emt.bookcatalog;
 
 import mk.ukim.finki.emt.bookcatalog.domain.model.*;
 import mk.ukim.finki.emt.bookcatalog.domain.repository.BookRepository;
-import mk.ukim.finki.emt.sharedkernel.domain.identity.Money;
+import mk.ukim.finki.emt.sharedkernel.domain.financial.Money;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.stereotype.Component;
 
-import javax.annotation.PostConstruct;
-import javax.transaction.Transactional;
 import java.util.ArrayList;
 
 @Component

@@ -1,5 +1,6 @@
 package mk.ukim.finki.emt.finemanagement.domain.model;
 
+import lombok.NoArgsConstructor;
 import mk.ukim.finki.emt.sharedkernel.domain.base.ValueObject;
 import org.springframework.lang.NonNull;
 
@@ -7,6 +8,7 @@ import javax.persistence.Embeddable;
 import java.util.Objects;
 
 @Embeddable
+@NoArgsConstructor
 public class FineDescription implements ValueObject {
 
     private String description;

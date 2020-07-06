@@ -5,7 +5,7 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import mk.ukim.finki.emt.sharedkernel.domain.base.AbstractEntity;
 import mk.ukim.finki.emt.sharedkernel.domain.base.DomainObjectId;
-import mk.ukim.finki.emt.sharedkernel.domain.identity.Money;
+import mk.ukim.finki.emt.sharedkernel.domain.financial.Money;
 import org.hibernate.annotations.Where;
 import org.springframework.lang.NonNull;
 

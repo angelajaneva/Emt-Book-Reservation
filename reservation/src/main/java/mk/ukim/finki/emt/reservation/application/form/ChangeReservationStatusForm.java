@@ -1,9 +1,9 @@
 package mk.ukim.finki.emt.reservation.application.form;
 
-import lombok.NonNull;
 import lombok.Getter;
 import mk.ukim.finki.emt.reservation.domain.model.ReservationId;
 import mk.ukim.finki.emt.reservation.domain.model.ReservationStatus;
+import org.springframework.lang.NonNull;
 
 @Getter
 public class ChangeReservationStatusForm {

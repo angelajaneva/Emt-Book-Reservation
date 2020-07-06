@@ -1,6 +1,5 @@
 package mk.ukim.finki.emt.reservation.application;
 
-import lombok.NonNull;
 import mk.ukim.finki.emt.reservation.application.form.ChangeReservationStatusForm;
 import mk.ukim.finki.emt.reservation.application.form.ReservationForm;
 import mk.ukim.finki.emt.reservation.domain.event.BookReturned;
@@ -12,6 +11,7 @@ import mk.ukim.finki.emt.reservation.domain.model.ReservationId;
 import mk.ukim.finki.emt.reservation.domain.model.ReservationStatus;
 import mk.ukim.finki.emt.reservation.domain.repository.ReservationRepository;
 import org.springframework.context.ApplicationEventPublisher;
+import org.springframework.lang.NonNull;
 import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -55,39 +55,47 @@ public class ReservationCatalog {
         return reservationRepository.findAll();
     }
 
+
+    //    @Scheduled(cron = "0 0 12 * * ?")
+    @Scheduled(fixedRate = 10000)
+    public void expiredReservation() {
+        List<Reservation> reservations = findAll();
+        reservations.forEach(reservation -> {
+            if (reservation.getDateExpiringReservation().checkExpired()) {
+                changeReservationStatus(new ChangeReservationStatusForm
+                        (reservation.getId(), ReservationStatus.Expired));
+                // ne ja brise vistinski od baza, napraveno e za da ne stignuva
+                //povekje pati kazna za istata rezervacija
+                reservation.delete();
+            }
+        });
+    }
+
     public Reservation changeReservationStatus(@NonNull ChangeReservationStatusForm reservationForm) {
         Objects.requireNonNull(reservationForm, "reservation must not be null");
 
         var reservation = reservationRepository.findById(reservationForm.getReservationId()).orElseThrow(RuntimeException::new);
         reservation.changeReservationStatus(reservationForm.getStatus());
         reservation = reservationRepository.saveAndFlush(reservation);
+
         //ako knigata e vratena da publikuvame event i da go zgolemime quantity na book
         if (reservation.getStatus() == ReservationStatus.Returned) {
-            applicationEventPublisher.publishEvent(new BookReturned(reservation.getId(), reservation.getBookId(), Instant.now()));
+            applicationEventPublisher.publishEvent(new BookReturned(reservation.getId(),
+                    reservation.getBookId(), Instant.now()));
+
         } else if (reservation.getStatus() == ReservationStatus.Expired) {
+            System.out.println("se publikuva expired event " + reservation.getId());
+            System.out.println("userId " + reservation.getUserId());
             //ovde treba si fine event da se publikuva
             applicationEventPublisher.publishEvent(new ReservationExpired(reservation.getId(), Instant.now(), reservation.getUserId()));
         }
         return reservation;
     }
 
-
-    @Scheduled(cron = "0 0 12 * * ?")
-    public void expiredReservation() {
-        List<Reservation> reservations = findAll();
-        reservations.forEach(reservation -> {
-            if (reservation.getDateExpiringReservation().checkExpired())
-                reservation.changeReservationStatus(ReservationStatus.Expired);
-        });
-    }
-
     private Reservation toDomainModel(ReservationForm reservationForm) {
         //1 mesec vreme za vrakjanje
         var expiringDate = new DateExpiring(reservationForm.getDateTakingReservation().getDateTaking().plusMonths(1L));
-        //preku bookCatalog se prave povik kon modulot za book
-//        var bookId = bookCatalog.findById(reservationForm.getBookId()).getId();
         var bookId = reservationForm.getBookId();
-        System.out.println(bookId + " vo reservation catalog");
         return new Reservation(ReservationStatus.Processing, bookId, reservationForm.getUserId(), expiringDate, reservationForm.getDateTakingReservation());
     }
 

@@ -9,6 +9,10 @@ public class FineId extends DomainObjectId {
 
     private String id;
 
+    private FineId() {
+        super(DomainObjectId.randomId(FineId.class).toString());
+    }
+
     public FineId(String id) {
         super(id);
         this.id = id;

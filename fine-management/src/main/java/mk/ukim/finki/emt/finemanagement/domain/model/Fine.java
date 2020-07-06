@@ -30,11 +30,16 @@ public class Fine extends AbstractEntity<FineId> {
     @AttributeOverride(name="id",column = @Column(name="user_id",nullable = false))
     private UserId userId;
 
-    public Fine(Price price, FineDescription fineDescription, boolean paid, UserId userId) {
+    @Embedded
+    @AttributeOverride(name="id",column = @Column(name="reservation_id",nullable = false))
+    private ReservationId reservationId;
+
+    public Fine(Price price, FineDescription fineDescription, boolean paid, UserId userId, ReservationId reservationId) {
         super(DomainObjectId.randomId(FineId.class));
         this.price = price;
         this.fineDescription = fineDescription;
         this.paid = paid;
         this.userId = userId;
+        this.reservationId = reservationId;
     }
 }

@@ -1,8 +1,7 @@
 package mk.ukim.finki.emt.reservation.domain.model;
 
-import lombok.AllArgsConstructor;
 import lombok.Getter;
-import mk.ukim.finki.emt.sharedkernel.domain.identity.Money;
+import mk.ukim.finki.emt.sharedkernel.domain.financial.Money;
 
 @Getter
 public class Book {

@@ -1,7 +1,7 @@
 package mk.ukim.finki.emt.finemanagement.domain.model;
 
 import lombok.NonNull;
-import mk.ukim.finki.emt.sharedkernel.domain.identity.Money;
+import mk.ukim.finki.emt.sharedkernel.domain.financial.Money;
 
 import javax.persistence.Embeddable;
 

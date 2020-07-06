@@ -58,7 +58,8 @@ public class DateExpiring implements ValueObject {
     }
 
     public boolean checkExpired() {
-        return dateExpiring.isBefore(LocalDate.now());
+        setExpired();
+        //treba before za test e after
+        return dateExpiring.isAfter(LocalDate.now());
     }
-
 }

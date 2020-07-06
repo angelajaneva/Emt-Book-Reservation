@@ -5,6 +5,7 @@ import lombok.NoArgsConstructor;
 import lombok.NonNull;
 import mk.ukim.finki.emt.sharedkernel.domain.base.AbstractEntity;
 import mk.ukim.finki.emt.sharedkernel.domain.base.DomainObjectId;
+import org.hibernate.annotations.Where;
 
 import javax.persistence.*;
 
@@ -12,6 +13,7 @@ import javax.persistence.*;
 @Table(name = "reservation")
 @Getter
 @NoArgsConstructor
+@Where(clause = "deleted=false")
 public class Reservation extends AbstractEntity<ReservationId> {
 
 //    @EmbeddedId
@@ -21,6 +23,9 @@ public class Reservation extends AbstractEntity<ReservationId> {
     @Enumerated(EnumType.STRING)
     @Column(name = "status")
     private ReservationStatus status;
+
+    @Column(name = "deleted")
+    private boolean deleted = false;
 
     @Embedded
     @AttributeOverride(name="id",column = @Column(name="book_id",nullable = false))
@@ -50,5 +55,9 @@ public class Reservation extends AbstractEntity<ReservationId> {
 
     public void changeReservationStatus(@NonNull ReservationStatus reservationStatus){
         this.status = reservationStatus;
+    }
+
+    public void delete(){
+        this.deleted = true;
     }
 }

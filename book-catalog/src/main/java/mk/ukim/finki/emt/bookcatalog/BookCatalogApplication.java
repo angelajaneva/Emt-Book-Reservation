@@ -1,4 +1,4 @@
-package mk.ukim.finki.emt.bookcatalog;
+ package mk.ukim.finki.emt.bookcatalog;
 
 import mk.ukim.finki.emt.sharedkernel.SharedConfiguration;
 import mk.ukim.finki.emt.sharedkernel.infra.eventlog.RemoteEventLogService;
@@ -22,7 +22,7 @@ public class BookCatalogApplication {
     }
 
     @Bean
-    public RemoteEventLogService reservationEvents(@Value("http://localhost:8082") String serverUrl,
+    public RemoteEventLogService ReservationEvents(@Value("http://localhost:8082") String serverUrl,
                                                    @Value("5000") int connectTimeout,
                                                    @Value("5000") int readTimeout){
         return new RemoteEventLogServiceClient(serverUrl, connectTimeout, readTimeout);

@@ -43,6 +43,7 @@ public class BookCatalog {
         bookRepository.save(book);
     }
 
+    //slusa vo ramkite na istata transakcija kaj so e publikuvan ovoj event
     @TransactionalEventListener(phase = TransactionPhase.BEFORE_COMMIT)
     public void onReservationCreated(ReservationCreatedEvent reservationCreatedEvent){
         Book book = bookRepository.findById(reservationCreatedEvent.getBookId()).orElseThrow(RuntimeException::new);

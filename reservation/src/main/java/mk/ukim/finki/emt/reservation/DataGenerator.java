@@ -31,7 +31,6 @@ public class DataGenerator implements CommandLineRunner {
     public void generateData(){
         var books = bookRepository.findAll();
         var reservation = reservationRepository.createReservation(makeReservation(books.get(0).getId(), new UserId("1")));
-      //  System.out.println(reservation);
     }
 
     private ReservationForm makeReservation(BookId bookId, UserId userId){

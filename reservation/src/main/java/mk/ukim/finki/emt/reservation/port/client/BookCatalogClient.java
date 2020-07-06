@@ -3,25 +3,17 @@ package mk.ukim.finki.emt.reservation.port.client;
 import mk.ukim.finki.emt.reservation.application.BookCatalog;
 import mk.ukim.finki.emt.reservation.domain.model.Book;
 import mk.ukim.finki.emt.reservation.domain.model.BookId;
-import mk.ukim.finki.emt.sharedkernel.domain.base.RemoteEventLog;
-import mk.ukim.finki.emt.sharedkernel.infra.eventlog.RemoteEventLogService;
-import mk.ukim.finki.emt.sharedkernel.infra.eventlog.StoredDomainEvent;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.PropertySource;
 import org.springframework.core.ParameterizedTypeReference;
 import org.springframework.http.HttpMethod;
-import org.springframework.http.HttpStatus;
-import org.springframework.http.ResponseEntity;
 import org.springframework.http.client.SimpleClientHttpRequestFactory;
-import org.springframework.lang.NonNull;
 import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestTemplate;
 import org.springframework.web.util.UriComponentsBuilder;
 
-import java.net.URI;
 import java.util.Collections;
 import java.util.List;
 
@@ -73,30 +65,4 @@ public class BookCatalogClient implements BookCatalog {
             return null;
         }
     }
-//
-//    @Override
-//    @NonNull
-//    public String source() {
-//        return "http://localhost:8082/";
-//    }
-//
-//    @Override
-//    public RemoteEventLog currentLog(long lastProcessedId) {
-//        URI currentLogUri = UriComponentsBuilder.fromUriString(source()).path
-//                (String.format("/api/event-log/%d", lastProcessedId)).build().toUri();
-//        System.out.println(lastProcessedId + "last ");
-//        return retrieveLog(currentLogUri);
-//    }
-
-//    @NonNull
-//    private RemoteEventLog retrieveLog(@NonNull URI uri) {
-//        ResponseEntity<List<StoredDomainEvent>> response = restTemplate.exchange
-//                (uri, HttpMethod.GET, null, new
-//                        ParameterizedTypeReference<List<StoredDomainEvent>>() {
-//                        });
-//        if (response.getStatusCode() != HttpStatus.OK) {
-//            throw new IllegalArgumentException("Could not retrieve log from URI " + uri);
-//        }
-//        return response::getBody;
-//    }
 }

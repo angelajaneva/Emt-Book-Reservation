@@ -39,8 +39,8 @@ public class FineCatalog {
     @TransactionalEventListener(phase = TransactionPhase.BEFORE_COMMIT)
     public void onBookReturnedEvent(ReservationExpiredEvent reservationExpiredEvent){
         Fine fine = new Fine(new Price(1000),
-                new FineDescription("Fine for expired reservation " + reservationExpiredEvent.reservationId()),
-                false, reservationExpiredEvent.userId());
+                new FineDescription("Fine for expired reservation " + reservationExpiredEvent.getReservationId()),
+                false, reservationExpiredEvent.getUserId(), reservationExpiredEvent.getReservationId());
         fineRepository.save(fine);
     }
 

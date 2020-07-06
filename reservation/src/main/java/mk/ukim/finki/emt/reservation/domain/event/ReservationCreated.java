@@ -25,8 +25,7 @@ public class ReservationCreated implements DomainEvent {
 
 
     @JsonCreator
-    public ReservationCreated(ReservationId reservationId,
-                              BookId bookId,
+    public ReservationCreated(ReservationId reservationId, BookId bookId,
                               Instant occurredOn) {
         this.reservationId = Objects.requireNonNull(reservationId, "reservationId must not be null");
         this.bookId = Objects.requireNonNull(bookId, "bookId must not be null");

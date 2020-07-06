@@ -18,6 +18,7 @@ import java.net.URI;
 import java.util.List;
 import java.util.Objects;
 
+
 public class RemoteEventLogServiceClient implements RemoteEventLogService {
 
     private final String source;
@@ -51,7 +52,7 @@ public class RemoteEventLogServiceClient implements RemoteEventLogService {
     }
 
     @NonNull
-    RemoteEventLog retrieveLog(@NonNull URI uri) {
+    private RemoteEventLog retrieveLog(@NonNull URI uri) {
         ResponseEntity<List<StoredDomainEvent>> response = restTemplate.exchange
                 (uri, HttpMethod.GET, null, new
                         ParameterizedTypeReference<List<StoredDomainEvent>>() {

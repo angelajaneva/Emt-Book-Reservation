@@ -14,7 +14,6 @@ import java.util.Objects;
 @Getter
 public class ReservationCreatedEvent implements DomainEvent {
 
-
     @JsonProperty("reservationId")
     private final ReservationId reservationId;
     @JsonProperty("bookId")
@@ -22,10 +21,8 @@ public class ReservationCreatedEvent implements DomainEvent {
     @JsonProperty("occurredOn")
     private final Instant occurredOn;
 
-
     @JsonCreator
-    public ReservationCreatedEvent(ReservationId reservationId,
-                              BookId bookId,
+    public ReservationCreatedEvent(ReservationId reservationId, BookId bookId,
                               Instant occurredOn) {
         this.reservationId = Objects.requireNonNull(reservationId, "reservationId must not be null");
         this.bookId = Objects.requireNonNull(bookId, "bookId must not be null");
@@ -34,7 +31,7 @@ public class ReservationCreatedEvent implements DomainEvent {
 
     @Override
     public Instant occurredOn() {
-        return null;
+        return occurredOn;
     }
 
 }

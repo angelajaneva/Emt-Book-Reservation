@@ -1,13 +1,12 @@
 package mk.ukim.finki.emt.usersubscription.domain.model.Subscription;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
-import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.NonNull;
 import mk.ukim.finki.emt.sharedkernel.domain.base.AbstractEntity;
 import mk.ukim.finki.emt.sharedkernel.domain.base.DomainObjectId;
-import mk.ukim.finki.emt.sharedkernel.domain.identity.Money;
+import mk.ukim.finki.emt.sharedkernel.domain.financial.Money;
 
 import javax.persistence.*;
 import java.util.ArrayList;
