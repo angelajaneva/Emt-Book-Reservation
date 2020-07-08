@@ -14,14 +14,14 @@ import java.util.Objects;
 @Getter
 public class BirthDate implements ValueObject {
 
-    private final Date date;
+    private final Date birthdate;
 
     public BirthDate(Date date) {
-        this.date = date;
+        this.birthdate = date;
     }
 
     public BirthDate(){
-        date = null;
+        birthdate = null;
     }
 
     public static BirthDate valueOf(Date date){
@@ -34,7 +34,7 @@ public class BirthDate implements ValueObject {
 
     @Override
     public String toString() {
-        return "Birth date"+ date;
+        return "Birth date"+ birthdate;
     }
 
     @Override
@@ -42,11 +42,11 @@ public class BirthDate implements ValueObject {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         BirthDate birthDate = (BirthDate) o;
-        return Objects.equals(date, birthDate.date);
+        return Objects.equals(birthdate, birthDate.birthdate);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(date);
+        return Objects.hash(birthdate);
     }
 }
