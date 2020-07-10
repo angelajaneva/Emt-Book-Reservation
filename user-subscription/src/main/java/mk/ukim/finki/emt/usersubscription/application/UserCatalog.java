@@ -32,7 +32,7 @@ public class UserCatalog {
     }
 
     @TransactionalEventListener(phase = TransactionPhase.BEFORE_COMMIT)
-    public User onBookReturnedEvent(FineCreatedEvent fineCreatedEvent) throws Exception {
+    public User onFineEventCreated(FineCreatedEvent fineCreatedEvent) throws Exception {
         var user = userRepository.findById(fineCreatedEvent.getUserId()).orElseThrow(RuntimeException::new);
         if (user == null){
             throw new Exception("User not found");

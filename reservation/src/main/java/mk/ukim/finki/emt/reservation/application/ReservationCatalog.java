@@ -19,6 +19,7 @@ import org.springframework.transaction.annotation.Transactional;
 import java.time.Instant;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 
 @Service
 @Transactional
@@ -49,6 +50,10 @@ public class ReservationCatalog {
     @NonNull
     public Reservation findById(@NonNull ReservationId id) {
         return reservationRepository.findById(id).orElseThrow(RuntimeException::new);
+    }
+
+    public Optional<Reservation> findByIdOptional(@NonNull ReservationId id) {
+        return reservationRepository.findById(id);
     }
 
     public List<Reservation> findAll() {

@@ -9,15 +9,13 @@ import javax.persistence.Embeddable;
 @Embeddable
 public class UserId extends DomainObjectId {
 
-    private String id;
 
-    private UserId(){
+    private UserId() {
         super(DomainObjectId.randomId(UserId.class).toString());
     }
 
     @JsonCreator
     public UserId(String id) {
         super(id);
-        this.id = id;
     }
 }
