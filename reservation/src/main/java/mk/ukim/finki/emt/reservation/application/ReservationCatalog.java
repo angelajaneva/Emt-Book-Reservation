@@ -66,7 +66,6 @@ public class ReservationCatalog {
     public void expiredReservation() {
         List<Reservation> reservations = findAll();
         reservations.forEach(reservation -> {
-            //checkExpired momentalno mi e netocen, za da testiram
             if (reservation.getDateExpiringReservation().checkExpired()) {
                 changeReservationStatus(new ChangeReservationStatusForm
                         //za da proveram returned eventot stavam takov status
