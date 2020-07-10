@@ -51,7 +51,7 @@ public class User extends AbstractEntity<UserId> {
 
     @Embedded
     @AttributeOverrides({
-            @AttributeOverride(name = "date", column =
+            @AttributeOverride(name = "birthdate", column =
             @Column(name = "birth_date"))
     })
     private BirthDate birthDate;
@@ -64,6 +64,9 @@ public class User extends AbstractEntity<UserId> {
                     column = @Column(name = "home_city"))
     })
     private Address address;
+
+    @Column(name = "status")
+    private UserStatus userStatus = UserStatus.OK;
 
     @OneToMany(mappedBy = "subscriptionId", cascade = CascadeType.ALL)
     @JsonIgnore
@@ -86,5 +89,9 @@ public class User extends AbstractEntity<UserId> {
         this.birthDate = BirthDate.valueOf(birthDate);
         this.address = Address.valueOf(address, city);
         this.subscriptions = subscriptions == null? new ArrayList<>(): subscriptions;
+    }
+
+    public void setStatus(UserStatus status){
+        this.userStatus = status;
     }
 }

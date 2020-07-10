@@ -27,7 +27,6 @@ public class DomainEventLogService {
     @Transactional(propagation = Propagation.MANDATORY)
     public void append(@NonNull DomainEvent domainEvent) {
         var storedEvent = new StoredDomainEvent(domainEvent, objectMapper);
-        System.out.println("vo domain event log service kaj so se zacuvuva event");
         storedDomainEventRepository.saveAndFlush(storedEvent);
     }
 

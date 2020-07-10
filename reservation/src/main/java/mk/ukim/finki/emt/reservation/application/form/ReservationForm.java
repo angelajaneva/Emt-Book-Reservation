@@ -2,12 +2,14 @@ package mk.ukim.finki.emt.reservation.application.form;
 
 import lombok.NonNull;
 import lombok.Getter;
+import lombok.Setter;
 import mk.ukim.finki.emt.reservation.application.BookCatalog;
 import mk.ukim.finki.emt.reservation.domain.model.BookId;
 import mk.ukim.finki.emt.reservation.domain.model.DateTaking;
 import mk.ukim.finki.emt.reservation.domain.model.UserId;
 
 @Getter
+@Setter
 public class ReservationForm {
 
     @NonNull

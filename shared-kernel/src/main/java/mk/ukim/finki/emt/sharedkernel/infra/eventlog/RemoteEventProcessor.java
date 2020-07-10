@@ -64,12 +64,10 @@ public class RemoteEventProcessor {
     }
 
     private void setLastProcessedId(@NonNull RemoteEventLogService remoteEventLogService, long lastProcessedId) {
-        System.out.println("save");
         processedRemoteEventRepository.saveAndFlush(new ProcessedRemoteEvent(remoteEventLogService.source(), lastProcessedId));
     }
 
     private void publishEvent(@NonNull StoredDomainEvent event) {
-        System.out.println("vo procesor" + event.domainEventClassName());
         remoteEventTranslators.values().stream()
                 .filter(translator -> translator.supports(event))
                 .findFirst()
